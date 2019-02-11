@@ -17,3 +17,28 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->email,
     ];
 });
+
+$factory->define(App\Camera::class, function (Faker\Generator $faker) {
+    return [
+        'camera_address' => $faker->macAddress,
+        'building_id' => factory(App\Building::class),
+        'token' => str_random(32),
+    ];
+});
+
+$factory->define(App\Building::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'campus_id' => factory(App\Campus::class),
+    ];
+});
+
+$factory->define(App\Campus::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'address' => $faker->streetAddress,
+        'city' => $faker->city,
+        'county' => $faker->country,
+        'postcode' => $faker->postcode,
+    ];
+});
