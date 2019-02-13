@@ -1,7 +1,7 @@
 <?php
 
-use App\Camera;
 use App\Building;
+use App\Camera;
 use Laravel\Lumen\Testing\DatabaseMigrations;
 
 class CameraTest extends TestCase
@@ -37,11 +37,11 @@ class CameraTest extends TestCase
 
         $this->json('POST', route('camera.register'), [
             'camera_address' => '78-45-C4-B8-9C-A4',
-            'building_id' => $building->id,
+            'building_id'    => $building->id,
         ])->assertResponseStatus(201);
 
         $this->seeInDatabase('cameras', [
-            'camera_address' => '78-45-C4-B8-9C-A4'
+            'camera_address' => '78-45-C4-B8-9C-A4',
         ]);
     }
 

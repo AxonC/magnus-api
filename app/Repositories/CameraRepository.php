@@ -1,4 +1,6 @@
-<?php namespace App\Repositories;
+<?php
+
+namespace App\Repositories;
 
 use App\Camera;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -18,8 +20,9 @@ class CameraRepository
             return false;
         }
 
-        if (!$camera->camera_address == $address)
+        if (!$camera->camera_address == $address) {
             return false;
+        }
 
         return true;
     }

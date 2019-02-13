@@ -1,7 +1,7 @@
 <?php
 
-use Laravel\Lumen\Testing\DatabaseMigrations;
 use App\Camera;
+use Laravel\Lumen\Testing\DatabaseMigrations;
 
 class CameraMiddlewareTest extends TestCase
 {

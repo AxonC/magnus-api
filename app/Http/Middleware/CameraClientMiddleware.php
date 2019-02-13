@@ -2,10 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use Closure;
-use App\Camera;
-use Illuminate\Http\Request;
 use App\Repositories\CameraRepository;
+use Closure;
+use Illuminate\Http\Request;
 
 class CameraClientMiddleware
 {
