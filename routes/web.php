@@ -15,15 +15,12 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-
 $router->post('camera/register',
     ['as' => 'camera.register', 'uses' => 'CamerasController@store']);
 $router->get('camera/all',
     ['as' => 'camera.all', 'uses' => 'CamerasController@all']);
-    
+
 $router->group(['middleware' => 'camera'], function () use ($router) {
     $router->get('camera/{id}',
     ['as' => 'camera.show', 'uses' => 'CamerasController@show']);
 });
-
-
