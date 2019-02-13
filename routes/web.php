@@ -19,6 +19,12 @@ $router->post('camera/register',
     ['as' => 'camera.register', 'uses' => 'CamerasController@store']);
 $router->get('camera/all',
     ['as' => 'camera.all', 'uses' => 'CamerasController@all']);
+$router->post('campus',
+    ['as' => 'campus.store', 'uses' => 'CampusController@store']);
+$router->get('campus/{id}/buildings',
+    ['as' => 'campus.buildings', 'uses' => 'CampusController@buildings']);
+$router->get('campus/{id}',
+    ['as' => 'campus.show', 'uses' => 'CampusController@show']);
 
 $router->group(['middleware' => 'camera'], function () use ($router) {
     $router->get('camera/{id}',
