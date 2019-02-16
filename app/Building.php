@@ -14,5 +14,8 @@ class Building extends Model
         // Validation rules
     ];
 
-    // Relationships
+    public function campus()
+    {
+        return $this->belongsTo(Campus::class);
+    }
 }
