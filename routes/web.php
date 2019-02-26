@@ -40,6 +40,9 @@ $router->get('building/{id}/cameras',
 $router->post('building',
     ['as' => 'building.store', 'uses' => 'BuildingController@store']);
 
+$router->post('login',
+    ['as' => 'login', 'uses' => 'AuthenticationController@login']);
+
 $router->group(['middleware' => 'camera'], function () use ($router) {
     $router->get('camera/{id}',
     ['as' => 'camera.show', 'uses' => 'CamerasController@show']);
