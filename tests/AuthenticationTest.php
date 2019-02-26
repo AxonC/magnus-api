@@ -57,4 +57,10 @@ class AuthenticationTest extends TestCase
             'username' => 'secret',
         ])->assertResponseStatus(422);
     }
+
+    /** @test */
+    public function an_authenticated_user_can_access_protected_routes()
+    {
+        $this->actingAs($this->user)->json('GET', 'test')->assertResponseOk();
+    }
 }

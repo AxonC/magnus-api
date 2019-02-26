@@ -14,7 +14,7 @@ class BuildingTest extends TestCase
     {
         parent::setUp();
 
-        $this->app->instance('middleware.disabled', true);
+        $this->app->instance('middleware.disable', true);
 
         $this->building = factory(Building::class)->create();
     }
