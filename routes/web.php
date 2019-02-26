@@ -41,7 +41,6 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
         ['as' => 'campus.show', 'uses' => 'CampusController@show']);
 });
 
-
 $router->group(['middleware' => 'camera'], function () use ($router) {
     $router->get('camera/{id}',
     ['as' => 'camera.show', 'uses' => 'CamerasController@show']);
