@@ -1,8 +1,8 @@
 <?php
 
+use App\Building;
 use App\Camera;
 use App\Campus;
-use App\Building;
 use Laravel\Lumen\Testing\DatabaseMigrations;
 
 class BuildingTest extends TestCase
