@@ -65,10 +65,7 @@ $app->singleton(
 
 $app->routeMiddleware([
     'camera' => App\Http\Middleware\CameraClientMiddleware::class,
-]);
-
-$app->routeMiddleware([
-    'auth' => App\Http\Middleware\Authenticate::class,
+    'auth'   => App\Http\Middleware\Authenticate::class,
 ]);
 
 /*

@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class CampusController extends Controller
 {
+    public function index()
+    {
+        $campuses = Campus::with('buildings')->get();
+
+        return response()->json(['data' => $campuses]);
+    }
+
     public function show($id)
     {
         try {
