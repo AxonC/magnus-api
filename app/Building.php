@@ -10,6 +10,8 @@ class Building extends Model
 
     protected $dates = [];
 
+    protected $with = ['cameras'];
+
     public static $rules = [
         // Validation rules
     ];
@@ -17,5 +19,10 @@ class Building extends Model
     public function campus()
     {
         return $this->belongsTo(Campus::class);
+    }
+
+    public function cameras()
+    {
+        return $this->hasMany(Camera::class);
     }
 }

@@ -59,4 +59,14 @@ class CampusTest extends TestCase
         $this->json('GET', route('campus.index'))
             ->seeJsonStructure(['data']);
     }
+
+    /** @test */
+    public function a_campuses_cameras_can_be_accessed_through_their_buildings()
+    {
+        $building = factory(Building::class)->create(['campus_id' => $this->campus->id]);
+        $camera = factory(\App\Camera::class)->create(['building_id' => $building]);
+
+        $this->json('GET', route('campus.show', ['id' => $this->campus->id]))
+            ->seeJsonStructure(['data' => ['buildings']]);
+    }
 }

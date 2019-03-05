@@ -25,7 +25,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Camera::class, function (Faker\Generator $faker) {
     return [
         'camera_address' => $faker->macAddress,
-        'building_id'    => factory(App\Building::class),
+        'building_id'    => factory(App\Building::class)->create()->id,
         'token'          => str_random(32),
     ];
 });

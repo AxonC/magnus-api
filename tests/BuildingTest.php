@@ -1,7 +1,8 @@
 <?php
 
-use App\Building;
+use App\Camera;
 use App\Campus;
+use App\Building;
 use Laravel\Lumen\Testing\DatabaseMigrations;
 
 class BuildingTest extends TestCase
@@ -38,6 +39,15 @@ class BuildingTest extends TestCase
     {
         $this->json('GET', route('building.show', ['id' => $this->building->id]))
             ->seeJsonStructure(['data']);
+    }
+
+    /** @test */
+    public function a_building_can_have_many_cameras()
+    {
+        $camera = factory(Camera::class)->create(['building_id' => $this->building->id]);
+
+        $this->assertNotNull($camera->building);
+        $this->assertNotNull($this->building->cameras);
     }
 
     /** @test */

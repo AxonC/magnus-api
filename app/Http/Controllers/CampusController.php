@@ -18,7 +18,7 @@ class CampusController extends Controller
     public function show($id)
     {
         try {
-            $campus = Campus::findOrFail($id);
+            $campus = Campus::findOrFail($id)->load('buildings');
         } catch (ModelNotFoundException $exception) {
             return response()->json(['error' => 'Campus not found.'], 404);
         }
