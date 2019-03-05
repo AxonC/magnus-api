@@ -33,6 +33,8 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
     /*
      * Campus Routes
      */
+    $router->get('campus',
+        ['as' => 'campus.index', 'uses' => 'CampusController@index']);
     $router->post('campus',
         ['as' => 'campus.store', 'uses' => 'CampusController@store']);
     $router->get('campus/{id}/buildings',

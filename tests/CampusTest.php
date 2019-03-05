@@ -52,4 +52,11 @@ class CampusTest extends TestCase
         $this->json('GET', route('campus.buildings', ['id' => $this->campus->id]))
             ->seeJsonStructure(['data' => ['campus', 'buildings']]);
     }
+
+    /** @test */
+    public function campuses_can_be_retrieved()
+    {
+        $this->json('GET', route('campus.index'))
+            ->seeJsonStructure(['data']);
+    }
 }
