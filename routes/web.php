@@ -12,6 +12,15 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
         return 'Working';
     });
 
+    $router->get('users',
+        ['as' => 'users.index', 'uses' => 'UsersController@index']);
+    $router->post('users',
+        ['as' => 'users.store', 'uses' => 'UsersController@store']);
+    $router->get('users/{id}',
+        ['as' => 'users.show', 'uses' => 'UsersController@show']);
+    $router->patch('users/{id}',
+        ['as' => 'users.update', 'uses' => 'UsersController@update']);
+
     /*
     * Building Routes
     */
@@ -26,9 +35,9 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
      *  Camera routes
      */
     $router->post('camera/register',
-    ['as' => 'camera.register', 'uses' => 'CamerasController@store']);
-    $router->get('camera/all',
-    ['as' => 'camera.all', 'uses' => 'CamerasController@all']);
+        ['as' => 'camera.register', 'uses' => 'CamerasController@store']);
+        $router->get('camera/all',
+        ['as' => 'camera.all', 'uses' => 'CamerasController@all']);
 
     /*
      * Campus Routes
