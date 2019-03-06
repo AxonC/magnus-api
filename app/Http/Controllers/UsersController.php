@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
@@ -31,7 +31,7 @@ class UsersController extends Controller
     {
         $this->validate($request, [
             'username' => 'required|string|min:6',
-            'email' => 'required|string',
+            'email'    => 'required|string',
             'password' => 'required|string|min:6',
         ]);
 

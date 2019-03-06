@@ -40,13 +40,13 @@ class UsersAdministrationTest extends TestCase
     {
         $this->json('POST', route('users.store'), [
             'username' => 'testusername',
-            'email' => 'test@test.com',
-            'password' => 'secret'
+            'email'    => 'test@test.com',
+            'password' => 'secret',
         ])->seeHeader('Location')->assertResponseStatus(201);
 
-         $this->seeInDatabase('users', [
+        $this->seeInDatabase('users', [
             'username' => 'testusername',
-            'email' => 'test@test.com'
+            'email'    => 'test@test.com',
          ]);
     }
 
@@ -54,7 +54,7 @@ class UsersAdministrationTest extends TestCase
     public function an_individual_user_can_be_updated()
     {
         $this->json('PATCH', route('users.update', ['id' => $this->user->id]), [
-            'username' => 'newusername'
+            'username' => 'newusername',
         ])->seeJson(['success' => 'User updated.'])->assertResponseOk();
     }
 }
