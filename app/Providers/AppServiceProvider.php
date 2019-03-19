@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\PositionReportsRepository;
+use App\Repositories\PositionReportsRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -16,5 +18,7 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment() == 'local') {
             $this->app->register('Wn\Generators\CommandsServiceProvider');
         }
+
+        $this->app->bind(PositionReportsRepositoryInterface::class, PositionReportsRepository::class);
     }
 }

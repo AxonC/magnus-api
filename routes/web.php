@@ -50,9 +50,26 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
         ['as' => 'campus.buildings', 'uses' => 'CampusController@buildings']);
     $router->get('campus/{id}',
         ['as' => 'campus.show', 'uses' => 'CampusController@show']);
+
+    /*
+     * Person Routes
+     */
+    $router->post('person',
+        ['as' => 'person.store', 'uses' => 'PersonsController@store']);
+    $router->post('person/type',
+        ['as' => 'person.type.store', 'uses' => 'PersonTypeController@store']);
+    $router->get('person/type/{id}',
+        ['as' => 'person.type.show', 'uses' => 'PersonTypeController@show']);
+    $router->get('person/{id}',
+        ['as' => 'person.show', 'uses' => 'PersonsController@show']);
 });
 
 $router->group(['middleware' => 'camera'], function () use ($router) {
     $router->get('camera/{id}',
-    ['as' => 'camera.show', 'uses' => 'CamerasController@show']);
+        ['as' => 'camera.show', 'uses' => 'CamerasController@show']);
+
+    $router->post('reports/success',
+        ['as' => 'reports.success', 'uses' => 'PositionReportsController@success']);
+    $router->post('reports/unsuccessful',
+        ['as' => 'reports.unsuccessful', 'uses' => 'PositionReportsController@unsuccessful']);
 });

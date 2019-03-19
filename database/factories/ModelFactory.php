@@ -46,3 +46,21 @@ $factory->define(App\Campus::class, function (Faker\Generator $faker) {
         'postcode' => $faker->postcode,
     ];
 });
+
+$factory->define(App\Person::class, function (Faker\Generator $faker) {
+    return [
+        'type_id' => factory(App\PersonType::class),
+    ];
+});
+
+$factory->define(App\PersonType::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+    ];
+});
+
+$factory->define(App\Student::class, function (Faker\Generator $faker) {
+    return [
+
+    ];
+});
