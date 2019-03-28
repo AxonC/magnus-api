@@ -29,7 +29,7 @@ class UsersAdministrationTest extends TestCase
     public function an_individual_user_can_be_retrieved()
     {
         $this->json('GET', route('users.show', ['id' => $this->user->id]))
-            ->seeJsonStructure(['data' => ['user']]);
+            ->seeJsonStructure(['data' => ['user' => ['roles']]]);
 
         $this->json('GET', route('users.show', ['id' => 0]))
             ->seeJson(['error' => 'User not found.'])->assertResponseStatus(404);
@@ -39,14 +39,18 @@ class UsersAdministrationTest extends TestCase
     public function an_individual_user_can_be_created()
     {
         $this->json('POST', route('users.store'), [
-            'username' => 'testusername',
-            'email'    => 'test@test.com',
-            'password' => 'secret',
+            'name_first' => 'First',
+            'name_last'  => 'Last',
+            'username'   => 'testusername',
+            'email'      => 'test@test.com',
+            'password'   => 'secret',
         ])->seeHeader('Location')->assertResponseStatus(201);
 
         $this->seeInDatabase('users', [
-            'username' => 'testusername',
-            'email'    => 'test@test.com',
+            'name_first' => 'First',
+            'name_last'  => 'Last',
+            'username'   => 'testusername',
+            'email'      => 'test@test.com',
          ]);
     }
 

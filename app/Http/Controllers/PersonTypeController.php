@@ -19,6 +19,17 @@ class PersonTypeController extends Controller
         return response()->json(['data' => ['type' => $personType]]);
     }
 
+    public function listing($id)
+    {
+        try {
+            $personType = PersonType::findOrFail($id)->load('people');
+        } catch (ModelNotFoundException $exception) {
+            return response()->json(['error' => 'Peron Type not found.'], 404);
+        }
+
+        return response()->json(['data' => ['type' => $personType]]);
+    }
+
     public function store(Request $request)
     {
         $this->validate($request, [

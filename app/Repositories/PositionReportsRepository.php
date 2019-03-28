@@ -23,14 +23,21 @@ class PositionReportsRepository implements PositionReportsRepositoryInterface
         return $this->model->create([
             'camera_id' => $data['camera_id'],
             'person_id' => $data['person_id'],
-            'success'   => $data['success'],
+            'success'   => true,
             'timestamp' => Carbon::now(),
         ]);
     }
 
     public function unsuccessful(array $data)
     {
-        // TODO: Implement unsuccessful() method.
+        $this->cameraIsValid($data['camera_id']);
+
+        return $this->model->create([
+            'camera_id' => $data['camera_id'],
+            'person_id' => $data['person_id'],
+            'success'   => false,
+            'timestamp' => Carbon::now(),
+        ]);
     }
 
     private function cameraIsValid($id)

@@ -18,9 +18,9 @@ class PositionReportsController extends Controller
     public function success(Request $request)
     {
         try {
-            $this->repository->success($request->only(['camera_id', 'person_id', 'success', 'notes']));
+            $this->repository->success($request->only(['camera_id', 'person_id', 'notes']));
         } catch (ModelNotFoundException $exception) {
-            return response()->json(['error' => 'Invalid camera detected.'], 422);
+            return $this->invalidCameraError();
         }
 
         return response()->json(['success' => 'Successful position report filed.'], 201);
@@ -29,11 +29,16 @@ class PositionReportsController extends Controller
     public function unsuccessful(Request $request)
     {
         try {
-            $this->repository->unsuccessful($request->only(['camera_id', 'person_id', 'success', 'notes']));
+            $this->repository->unsuccessful($request->only(['camera_id', 'person_id', 'notes']));
         } catch (ModelNotFoundException $exception) {
-            return response()->json(['error' => 'Invalid camera detected.'], 422);
+            return $this->invalidCameraError();
         }
 
         return response()->json(['success' => 'Unsuccessful position report filed.'], 201);
+    }
+
+    private function invalidCameraError()
+    {
+        return response()->json(['error' => 'Invalid camera detected'], 422);
     }
 }

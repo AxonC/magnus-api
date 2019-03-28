@@ -26,28 +26,30 @@ class PositionReportTest extends TestCase
     /** @test */
     public function a_positive_position_report_can_be_created()
     {
-        $repository = Mockery::mock(PositionReportsRepository::class);
-        $repository->shouldReceive('success')->once();
-        app()->instance(PositionReportsRepository::class, $repository);
+        $this->mockRepository('success');
 
         $this->json('POST', route('reports.success'), [
             'person_id'  => $this->person->id,
             'camera_id'  => $this->camera->id,
-            'successful' => 1,
         ])->assertResponseStatus(201);
     }
 
     /** @test */
     public function an_unidentified_position_report_can_be_created()
     {
-        $repository = Mockery::mock(PositionReportsRepository::class);
-        $repository->shouldReceive('unsuccessful')->once();
-        app()->instance(PositionReportsRepository::class, $repository);
+        $this->mockRepository('unsuccessful');
 
         $this->json('POST', route('reports.unsuccessful'), [
             'person_id'  => $this->person->id,
             'camera_id'  => $this->camera->id,
-            'successful' => 0,
         ])->assertResponseStatus(201);
+    }
+
+    private function mockRepository($methodName)
+    {
+        $repository = \Mockery::mock(PositionReportsRepository::class);
+        $repository->shouldReceive($methodName)->once();
+
+        return app()->instance(PositionReportsRepository::class, $repository);
     }
 }

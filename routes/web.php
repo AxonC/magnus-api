@@ -60,6 +60,8 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
         ['as' => 'person.type.store', 'uses' => 'PersonTypeController@store']);
     $router->get('person/type/{id}',
         ['as' => 'person.type.show', 'uses' => 'PersonTypeController@show']);
+    $router->get('person/type/{id}/list',
+        ['as' => 'person.type.list', 'uses' => 'PersonTypeController@listing']);
     $router->get('person/{id}',
         ['as' => 'person.show', 'uses' => 'PersonsController@show']);
 });

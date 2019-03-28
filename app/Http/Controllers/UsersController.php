@@ -30,12 +30,14 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'username' => 'required|string|min:6',
-            'email'    => 'required|string',
-            'password' => 'required|string|min:6',
+            'name_first' => 'required|string|min:3',
+            'name_last'  => 'required|string|min:3',
+            'username'   => 'required|string|min:6',
+            'email'      => 'required|string',
+            'password'   => 'required|string|min:6',
         ]);
 
-        $user = User::create(array_merge($request->only(['username', 'email']),
+        $user = User::create(array_merge($request->only(['name_first', 'name_last', 'username', 'email']),
             ['password' => Hash::make($request->input('password'))]
         ));
 
@@ -46,7 +48,9 @@ class UsersController extends Controller
     public function update($id, Request $request)
     {
         try {
-            $id = User::findOrFail($id)->update($request->only(['username', 'email']));
+            $id = User::findOrFail($id)->update(
+                $request->only(['name_first', 'name_last', 'username', 'email'])
+            );
         } catch (ModelNotFoundException $exception) {
             return response()->json(['error' => 'User not found.'], 404);
         }

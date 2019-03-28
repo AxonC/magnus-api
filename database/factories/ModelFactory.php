@@ -15,10 +15,12 @@ use Illuminate\Support\Facades\Hash;
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
-        'username'  => $faker->name,
-        'email'     => $faker->email,
-        'token'     => str_random(32),
-        'password'  => Hash::make('secret'),
+        'name_first' => $faker->firstName,
+        'name_last'  => $faker->lastName,
+        'username'   => $faker->name,
+        'email'      => $faker->email,
+        'token'      => str_random(32),
+        'password'   => Hash::make('secret'),
     ];
 });
 

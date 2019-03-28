@@ -29,6 +29,14 @@ class PersonTest extends TestCase
     }
 
     /** @test */
+    public function a_type_has_many_people()
+    {
+        $this->person->type()->associate($this->personType);
+
+        $this->assertNotNull($this->personType->people);
+    }
+
+    /** @test */
     public function a_person_has_position_reports()
     {
         $this->assertNotNull($this->person->reports);
@@ -63,5 +71,12 @@ class PersonTest extends TestCase
     {
         $this->json('GET', route('person.show', ['id' => $this->person->id]))
             ->seeJsonStructure(['data' => ['person']])->assertResponseOk();
+    }
+
+    /** @test */
+    public function a_list_of_people_of_a_type_can_be_retrieved()
+    {
+        $this->json('GET', route('person.type.list', ['id' => $this->personType->id]))
+            ->seeJsonStructure(['data' => ['type' => ['people']]])->assertResponseOk();
     }
 }

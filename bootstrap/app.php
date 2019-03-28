@@ -64,8 +64,10 @@ $app->singleton(
 // ]);
 
 $app->routeMiddleware([
-    'camera' => App\Http\Middleware\CameraClientMiddleware::class,
-    'auth'   => App\Http\Middleware\Authenticate::class,
+    'camera'     => App\Http\Middleware\CameraClientMiddleware::class,
+    'auth'       => App\Http\Middleware\Authenticate::class,
+    'permission' => Spatie\Permission\Middlewares\PermissionMiddleware::class,
+    'role'       => Spatie\Permission\Middlewares\RoleMiddleware::class,
 ]);
 
 /*
@@ -86,6 +88,10 @@ $app->register(App\Providers\AuthServiceProvider::class);
 if (class_exists('Laravel\Tinker\TinkerServiceProvider')) {
     $app->register(Laravel\Tinker\TinkerServiceProvider::class);
 }
+
+$app->configure('permission');
+$app->alias('cache', \Illuminate\Cache\CacheManager::class);  // if you don't have this already
+$app->register(Spatie\Permission\PermissionServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
