@@ -18,12 +18,12 @@ class CamerasController extends Controller
     public function show($id)
     {
         try {
-            $camera = Camera::findOrFail($id);
+            $camera = Camera::findOrFail($id)->load(['building']);
         } catch (ModelNotFoundException $exception) {
             return response()->json(['error' => 'Camera with that key is not found.'], 404);
         }
 
-        return response()->json(['data' => $camera]);
+        return response()->json(['data' => ['camera' => $camera, 'building' => $camera->building]]);
     }
 
     public function store(Request $request)

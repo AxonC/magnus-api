@@ -49,9 +49,16 @@ class CameraTest extends TestCase
     public function details_on_a_camera_can_be_retrieved()
     {
         $this->json('GET', route('camera.show', ['id' => $this->camera->id]))
-            ->assertResponseStatus(200);
+            ->seeJsonStructure(['data' => ['camera']])->assertResponseStatus(200);
 
         $this->json('GET', route('camera.show', ['id' => 180]))
             ->assertResponseStatus(404);
+    }
+
+    /** @test */
+    public function a_camera_has_its_building_listed_on_retrieve()
+    {
+        $this->json('GET', route('camera.show', ['id' => $this->camera->id]))
+            ->seeJsonStructure(['data' => ['camera', 'building']]);
     }
 }
