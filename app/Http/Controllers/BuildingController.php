@@ -10,15 +10,15 @@ class BuildingController extends Controller
 {
     public function show($id)
     {
-        $building = $this->retrieveOrFail($id);
+        $building = $this->retrieveOrFail($id)->load(['cameras']);
 
-        return response()->json(['data' => $building]);
+        return response()->json(['data' => ['building' => $building]]);
     }
 
     public function cameras($id)
     {
         try {
-            $building = Building::findOrFail($id);
+            $building = Building::findOrFail($id)->load(['cameras']);
         } catch (ModelNotFoundException $exception) {
             return response()->json(['error' => 'Building not found.'], 404);
         }

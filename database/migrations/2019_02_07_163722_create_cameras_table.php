@@ -9,6 +9,7 @@ class CreateCamerasTable extends Migration
     {
         Schema::create('cameras', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->macAddress('camera_address');
             $table->unsignedInteger('building_id');
             $table->string('token')->nullable();

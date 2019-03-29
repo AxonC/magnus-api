@@ -10,12 +10,6 @@ class Building extends Model
 
     protected $dates = [];
 
-    protected $with = ['cameras'];
-
-    public static $rules = [
-        // Validation rules
-    ];
-
     public function campus()
     {
         return $this->belongsTo(Campus::class);

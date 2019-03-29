@@ -10,9 +10,9 @@ class Camera extends Model
 
     protected $dates = [];
 
-    public static $rules = [
-        // Validation rules
-    ];
+    protected $casts = ['active' => 'bool'];
+
+    protected $hidden = ['camera_token'];
 
     public function building()
     {

@@ -38,7 +38,7 @@ class BuildingTest extends TestCase
     public function a_building_can_be_retrieved()
     {
         $this->json('GET', route('building.show', ['id' => $this->building->id]))
-            ->seeJsonStructure(['data']);
+            ->seeJsonStructure(['data' => ['building' => ['cameras']]]);
     }
 
     /** @test */
