@@ -35,9 +35,10 @@ class UsersController extends Controller
             'username'   => 'required|string|min:6',
             'email'      => 'required|string',
             'password'   => 'required|string|min:6',
+            'image_url'  => 'nullable',
         ]);
 
-        $user = User::create(array_merge($request->only(['name_first', 'name_last', 'username', 'email']),
+        $user = User::create(array_merge($request->only(['name_first', 'name_last', 'username', 'email', 'image_url']),
             ['password' => Hash::make($request->input('password'))]
         ));
 
@@ -49,7 +50,7 @@ class UsersController extends Controller
     {
         try {
             $id = User::findOrFail($id)->update(
-                $request->only(['name_first', 'name_last', 'username', 'email'])
+                $request->only(['name_first', 'name_last', 'username', 'email', 'image_url'])
             );
         } catch (ModelNotFoundException $exception) {
             return response()->json(['error' => 'User not found.'], 404);

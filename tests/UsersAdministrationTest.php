@@ -44,6 +44,7 @@ class UsersAdministrationTest extends TestCase
             'username'   => 'testusername',
             'email'      => 'test@test.com',
             'password'   => 'secret',
+            'image_url'  => 'https://test-image.com/1.png',
         ])->seeHeader('Location')->assertResponseStatus(201);
 
         $this->seeInDatabase('users', [
@@ -51,6 +52,7 @@ class UsersAdministrationTest extends TestCase
             'name_last'  => 'Last',
             'username'   => 'testusername',
             'email'      => 'test@test.com',
+            'image_url'  => 'https://test-image.com/1.png',
          ]);
     }
 
