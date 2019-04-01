@@ -61,4 +61,15 @@ class UsersAdministrationTest extends TestCase
             'username' => 'newusername',
         ])->seeJson(['success' => 'User updated.'])->assertResponseOk();
     }
+
+    /** @test */
+    public function an_user_can_be_deleted()
+    {
+        $this->json('DELETE', route('users.delete', ['id' => $this->user->id]))
+            ->assertResponseOk();
+
+        $this->missingFromDatabase('users', [
+            'id' => $this->user->id,
+        ]);
+    }
 }

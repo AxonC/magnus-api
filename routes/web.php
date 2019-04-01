@@ -20,6 +20,8 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
         ['as' => 'users.show', 'uses' => 'UsersController@show']);
     $router->patch('users/{id}',
         ['as' => 'users.update', 'uses' => 'UsersController@update']);
+    $router->delete('users/{id}',
+        ['as' => 'users.delete', 'uses' => 'UsersController@delete']);
 
     /*
     * Building Routes

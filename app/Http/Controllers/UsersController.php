@@ -57,4 +57,17 @@ class UsersController extends Controller
 
         return response()->json(['success' => 'User updated.']);
     }
+
+    public function delete($id)
+    {
+        try {
+            $user = User::findOrFail($id);
+        } catch (ModelNotFoundException $exception) {
+            return response()->json(['error' => 'User not found.'], 404);
+        }
+
+        $user->delete();
+
+        return response()->json(['success' => 'User deleted.']);
+    }
 }
