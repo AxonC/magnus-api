@@ -16,6 +16,8 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
         ['as' => 'users.index', 'uses' => 'UsersController@index']);
     $router->post('users',
         ['as' => 'users.store', 'uses' => 'UsersController@store']);
+    $router->get('users/me',
+        ['as' => 'users.me', 'uses' => 'UsersController@me']);
     $router->get('users/{id}',
         ['as' => 'users.show', 'uses' => 'UsersController@show']);
     $router->patch('users/{id}',
