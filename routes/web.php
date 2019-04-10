@@ -66,6 +66,13 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
         ['as' => 'person.type.list', 'uses' => 'PersonTypeController@listing']);
     $router->get('person/{id}',
         ['as' => 'person.show', 'uses' => 'PersonsController@show']);
+
+
+    /*
+     * Students Routes
+    */
+    $router->get('students', 
+        ['as' => 'students.index', 'uses' => 'StudentsController@index']);
 });
 
 $router->group(['middleware' => 'camera'], function () use ($router) {
