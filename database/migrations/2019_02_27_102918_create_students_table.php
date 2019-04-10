@@ -19,6 +19,7 @@ class CreateStudentsTable extends Migration
             $table->unsignedInteger('course_id');
             $table->date('dob');
             $table->string('gender');
+            $table->string('start_year');
             $table->timestamps();
         });
     }

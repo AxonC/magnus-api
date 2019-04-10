@@ -76,5 +76,6 @@ $factory->define(App\Student::class, function (Faker\Generator $faker) {
         'course_id' => factory(App\Course::class),
         'dob' => $faker->date,
         'gender' => $faker->word,
+        'start_year' => $faker->year
     ];
 });
