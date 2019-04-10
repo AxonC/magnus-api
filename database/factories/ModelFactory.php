@@ -72,10 +72,10 @@ $factory->define(App\Course::class, function (Faker\Generator $faker) {
 $factory->define(App\Student::class, function (Faker\Generator $faker) {
     return [
         'identifier' => factory(App\Person::class)->create()->id,
-        'name' => $faker->name,
-        'course_id' => factory(App\Course::class),
-        'dob' => $faker->date,
-        'gender' => $faker->word,
-        'start_year' => $faker->year
+        'name'       => $faker->name,
+        'course_id'  => factory(App\Course::class),
+        'dob'        => $faker->date,
+        'gender'     => $faker->word,
+        'start_year' => $faker->year,
     ];
 });

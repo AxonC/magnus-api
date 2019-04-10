@@ -67,11 +67,10 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
     $router->get('person/{id}',
         ['as' => 'person.show', 'uses' => 'PersonsController@show']);
 
-
     /*
      * Students Routes
     */
-    $router->get('students', 
+    $router->get('students',
         ['as' => 'students.index', 'uses' => 'StudentsController@index']);
 });
 

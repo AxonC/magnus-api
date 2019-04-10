@@ -6,24 +6,24 @@ use Laravel\Lumen\Testing\DatabaseMigrations;
 
 class CourseTest extends TestCase
 {
-	use DatabaseMigrations;
+    use DatabaseMigrations;
 
-	private $course;
+    private $course;
 
-	public function setUp()
-	{
-		parent::setUp();
+    public function setUp()
+    {
+        parent::setUp();
 
-		$this->course = factory(Course::class)->create();
+        $this->course = factory(Course::class)->create();
 
-		$this->disableMiddleware();
-	}
+        $this->disableMiddleware();
+    }
 
-	/** @test */
-	public function a_course_can_have_many_students()
-	{
-	    $students = factory(Student::class, 3)->create(['course_id' => $this->course->id]);
+    /** @test */
+    public function a_course_can_have_many_students()
+    {
+        $students = factory(Student::class, 3)->create(['course_id' => $this->course->id]);
 
-	    $this->assertCount(3, $this->course->students);
-	}
+        $this->assertCount(3, $this->course->students);
+    }
 }

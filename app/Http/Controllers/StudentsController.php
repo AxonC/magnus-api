@@ -6,10 +6,10 @@ use App\Student;
 
 class StudentsController extends Controller
 {
-	public function index()
-	{
-		$students = Student::with('course')->get();
+    public function index()
+    {
+        $students = Student::with('course')->get();
 
-		return response()->json(['data' => ['students' => $students]]);
-	}
+        return response()->json(['data' => ['students' => $students]]);
+    }
 }
