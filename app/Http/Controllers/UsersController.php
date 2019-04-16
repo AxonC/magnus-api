@@ -47,7 +47,7 @@ class UsersController extends Controller
         ]);
 
         $user = User::create(array_merge($request->only(['name_first', 'name_last', 'username', 'email', 'image_url']),
-            ['password' => Hash::make($request->input('password'))]
+            ['password' => Hash::make($request->input('password')), 'token' => str_random(32)]
         ));
 
         return response()->json(['success' => 'User created!'], 201)
