@@ -10,7 +10,7 @@ class CampusController extends Controller
 {
     public function index()
     {
-        $campuses = Campus::with('buildings')->get();
+        $campuses = Campus::with(['buildings', 'buildings.cameras'])->get();
 
         return response()->json(['data' => $campuses]);
     }
