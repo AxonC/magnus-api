@@ -36,12 +36,6 @@ class CamerasController extends Controller
 
         $token = sha1(str_random(32));
 
-        // $camera = Camera::create([
-        //     'camera_address' => $request->input('camera_address'),
-        //     'building_id'    => $request->input('building_id'),
-        //     'token'          => $token,
-        // ]);
-
         $camera = Camera::create(array_merge($request->only(['name', 'camera_address', 'building_id']), ['token' => $token]));
 
         return response()->json(['token' => $token, 'camera' => $camera], 201)

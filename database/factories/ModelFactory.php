@@ -72,7 +72,8 @@ $factory->define(App\Course::class, function (Faker\Generator $faker) {
 $factory->define(App\Student::class, function (Faker\Generator $faker) {
     return [
         'identifier' => factory(App\Person::class)->create()->id,
-        'name'       => $faker->name,
+        'name_first' => $faker->firstName,
+        'name_last'  => $faker->lastName,
         'course_id'  => factory(App\Course::class),
         'dob'        => $faker->date,
         'gender'     => $faker->word,
