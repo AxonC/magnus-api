@@ -15,8 +15,12 @@ class Student extends Model
         return $this->belongsTo(Course::class);
     }
 
-    // public function getLastPositionAttribute()
-    // {
+    public function person()
+    {
+        return $this->belongsTo(Person::class, 'identifier');
+    }
 
-    // }
+    public function getLastPositionAttribute()
+    {
+    }
 }
