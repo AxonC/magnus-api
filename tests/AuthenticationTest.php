@@ -63,4 +63,11 @@ class AuthenticationTest extends TestCase
     {
         $this->actingAs($this->user)->json('GET', 'test')->assertResponseOk();
     }
+
+    /** @test */
+    public function an_authenticated_user_can_retrieve_its_own_details()
+    {
+        $this->actingAs($this->user)->json('GET', route('users.me'))
+            ->seeJsonStructure(['data' => ['user' => ['id', 'name_first', 'name_last', 'email']]]);
+    }
 }

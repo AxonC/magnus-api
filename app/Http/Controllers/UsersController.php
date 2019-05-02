@@ -5,10 +5,18 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
+    public function me()
+    {
+        $user = Auth::user();
+
+        return response()->json(['data' => ['user' => $user]]);
+    }
+
     public function index()
     {
         $users = User::all();
@@ -39,7 +47,7 @@ class UsersController extends Controller
         ]);
 
         $user = User::create(array_merge($request->only(['name_first', 'name_last', 'username', 'email', 'image_url']),
-            ['password' => Hash::make($request->input('password'))]
+            ['password' => Hash::make($request->input('password')), 'token' => str_random(32)]
         ));
 
         return response()->json(['success' => 'User created!'], 201)
