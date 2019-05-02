@@ -74,9 +74,9 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
     */
     $router->get('students',
         ['as' => 'students.index', 'uses' => 'StudentsController@index']);
-    $router->post('students', 
+    $router->post('students',
         ['as' => 'students.store', 'uses' => 'StudentsController@store']);
-    $router->get('students/{id}', 
+    $router->get('students/{id}',
         ['as' => 'students.show', 'uses' => 'StudentsController@show']);
 });
 
