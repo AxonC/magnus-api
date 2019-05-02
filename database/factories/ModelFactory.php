@@ -62,8 +62,21 @@ $factory->define(App\PersonType::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\Course::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'code' => $faker->word,
+    ];
+});
+
 $factory->define(App\Student::class, function (Faker\Generator $faker) {
     return [
-
+        'identifier' => factory(App\Person::class)->create()->id,
+        'name_first' => $faker->firstName,
+        'name_last'  => $faker->lastName,
+        'course_id'  => factory(App\Course::class),
+        'dob'        => $faker->date,
+        'gender'     => $faker->word,
+        'start_year' => $faker->year,
     ];
 });
