@@ -16,7 +16,8 @@ class CreatePositionReportsTable extends Migration
         Schema::create('position_reports', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('camera_id');
-            $table->unsignedBigInteger('person_id');
+            $table->string('reportable_type');
+            $table->string('reportable_id');
             $table->boolean('successful');
             $table->text('notes');
             $table->timestamp('timestamp');

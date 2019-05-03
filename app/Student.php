@@ -20,6 +20,11 @@ class Student extends Model
         return $this->belongsTo(Person::class, 'identifier');
     }
 
+    public function reports()
+    {
+        return $this->morphMany(PositionReport::class, 'reportable');
+    }
+
     public function getLastPositionAttribute()
     {
     }

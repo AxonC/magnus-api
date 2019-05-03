@@ -20,6 +20,6 @@ class Person extends Model
 
     public function reports()
     {
-        return $this->hasMany(PositionReport::class);
+        return $this->morphMany(PositionReport::class, 'reportable');
     }
 }

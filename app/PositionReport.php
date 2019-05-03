@@ -11,4 +11,11 @@ class PositionReport extends Model
     protected $dates = ['timestamp'];
 
     public $timestamps = false;
+
+    protected $casts = ['successful' => 'boolean'];
+
+    public function reportable()
+    {
+    	return $this->morphTo();
+    }
 }
