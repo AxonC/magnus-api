@@ -20,11 +20,11 @@ class StudentPositionReports implements PositionReportsRepositoryInterface
 
         $student = Student::where('identifier', $data['identifier'])->firstOrFail();
 
-    	return $student->reports()->create([
-    		'camera_id' => $camera->id,
-    		'successful' => true,
-    		'timestamp' => \Carbon\Carbon::now(),
-    	]);
+        return $student->reports()->create([
+            'camera_id'  => $camera->id,
+            'successful' => true,
+            'timestamp'  => \Carbon\Carbon::now(),
+        ]);
     }
 
     public function unsuccessful(array $data)

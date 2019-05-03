@@ -28,6 +28,6 @@ class Student extends Model
 
     public function getIdentifierAttribute($value)
     {
-        return (string)$this->attributes['identifier'];
+        return (string) $this->attributes['identifier'];
     }
 }
