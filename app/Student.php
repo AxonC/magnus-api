@@ -10,6 +10,7 @@ class Student extends Model
     protected $primaryKey = 'identifier';
     protected $casts = ['identifier' => 'string'];
     protected $keyType = 'string';
+    protected $appends = ['location'];
 
     public function course()
     {
@@ -29,5 +30,10 @@ class Student extends Model
     public function getIdentifierAttribute($value)
     {
         return (string) $this->attributes['identifier'];
+    }
+
+    public function getLocationAttribute()
+    {
+        return $this->reports->last()->load('camera', 'camera.building', 'camera.building.campus');
     }
 }
