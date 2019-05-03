@@ -18,7 +18,7 @@ class PositionReportsController extends Controller
     public function success(Request $request)
     {
         try {
-            $this->repository->success($request->only(['camera_id', 'person_id', 'notes']));
+            $this->repository->success($request->only(['camera_id', 'person_id', 'notes', 'type', 'type_id']));
         } catch (ModelNotFoundException $exception) {
             return $this->invalidCameraError();
         }

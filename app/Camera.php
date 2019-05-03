@@ -10,7 +10,7 @@ class Camera extends Model
 
     protected $dates = [];
 
-    protected $casts = ['active' => 'bool'];
+    protected $casts = ['active' => 'bool', 'id' => 'integer'];
 
     protected $hidden = ['camera_token'];
 

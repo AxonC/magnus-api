@@ -19,7 +19,7 @@ class CreatePositionReportsTable extends Migration
             $table->string('reportable_type');
             $table->string('reportable_id');
             $table->boolean('successful');
-            $table->text('notes');
+            $table->text('notes')->nullable();
             $table->timestamp('timestamp');
         });
     }

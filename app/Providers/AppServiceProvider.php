@@ -20,5 +20,6 @@ class AppServiceProvider extends ServiceProvider
         }
 
         $this->app->bind(PositionReportsRepositoryInterface::class, PositionReportsRepository::class);
+        $this->app->bind(PositionReportsRepositoryInterface::class, StudentPositionReports::class);
     }
 }

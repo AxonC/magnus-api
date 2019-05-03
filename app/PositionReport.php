@@ -12,10 +12,15 @@ class PositionReport extends Model
 
     public $timestamps = false;
 
-    protected $casts = ['successful' => 'boolean'];
+    protected $casts = ['successful' => 'boolean', 'camera_id' => 'integer'];
 
     public function reportable()
     {
     	return $this->morphTo();
+    }
+
+    public function camera()
+    {
+    	return $this->belongsTo(Camera::class);
     }
 }

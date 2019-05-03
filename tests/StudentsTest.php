@@ -1,5 +1,6 @@
 <?php
 
+use App\Camera;
 use App\Course;
 use App\Student;
 use Laravel\Lumen\Testing\DatabaseMigrations;
@@ -14,9 +15,11 @@ class StudentsTest extends TestCase
     {
         parent::setUp();
 
-        $this->student = factory(Student::class)->create();
-
         $this->disableMiddleware();
+
+        $this->student = factory(Student::class)->create(['identifier' => 'n0727303']);
+
+        $this->camera = factory(Camera::class)->create();
     }
 
     /** @test */
@@ -30,6 +33,16 @@ class StudentsTest extends TestCase
     {
         $this->json('GET', route('students.show', ['id' => $this->student->identifier]))
             ->seeJsonStructure(['data' => ['student' => ['course']]]);
+    }
+
+    /** @test */
+    public function a_position_report_can_be_created_for_a_student()
+    {
+        dd($this->student->getKey(), Student::all());
+        $this->json('POST', route('reports.student.success'), [
+            'identifier' => $this->student->identifier,
+            'camera_id' => $this->camera->id
+        ])->assertResponseStatus(201);
     }
 
     /** @test */
