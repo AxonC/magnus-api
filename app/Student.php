@@ -28,10 +28,6 @@ class Student extends Model
 
     public function getIdentifierAttribute($value)
     {
-        return (string)$value;
-    }
-
-    public function getLastPositionAttribute()
-    {
+        return (string)$this->attributes['identifier'];
     }
 }

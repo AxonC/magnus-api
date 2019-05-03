@@ -24,6 +24,7 @@ class StudentPositionReports implements PositionReportsRepositoryInterface
     	return $student->reports()->create([
     		'camera_id' => $camera->id,
     		'successful' => true,
+    		'timestamp' => \Carbon\Carbon::now(),
     	]);
     }
 

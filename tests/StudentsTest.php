@@ -31,16 +31,15 @@ class StudentsTest extends TestCase
     /** @test */
     public function a_student_can_be_retrieved()
     {
-        $this->json('GET', route('students.show', ['id' => $this->student->identifier]))
+        $this->json('GET', route('students.show', ['id' => $this->student->first()->getKey()]))
             ->seeJsonStructure(['data' => ['student' => ['course']]]);
     }
 
     /** @test */
     public function a_position_report_can_be_created_for_a_student()
     {
-        dd($this->student->getKey(), Student::all());
         $this->json('POST', route('reports.student.success'), [
-            'identifier' => $this->student->identifier,
+            'identifier' => $this->student->first()->getKey(),
             'camera_id' => $this->camera->id
         ])->assertResponseStatus(201);
     }
