@@ -84,7 +84,7 @@ $router->group(['middleware' => 'camera'], function () use ($router) {
     $router->get('camera/{id}',
         ['as' => 'camera.show', 'uses' => 'CamerasController@show']);
 
-    $router->post('reports/student/success', 
+    $router->post('reports/student/success',
         ['as' => 'reports.student.success', 'uses' => 'StudentPositionReportsController@success']);
     $router->post('reports/success',
         ['as' => 'reports.success', 'uses' => 'PositionReportsController@success']);

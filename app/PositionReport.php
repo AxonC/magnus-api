@@ -21,6 +21,6 @@ class PositionReport extends Model
 
     public function camera()
     {
-    	return $this->belongsTo(Camera::class);
+        return $this->belongsTo(Camera::class);
     }
 }

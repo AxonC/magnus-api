@@ -23,7 +23,7 @@ class Student extends Model
 
     public function setIdentifierAttribute($value)
     {
-        $this->attributes['identifier'] = (string)$value;
+        $this->attributes['identifier'] = (string) $value;
     }
 
     public function getIdentifierAttribute($value)
