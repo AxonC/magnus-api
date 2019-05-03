@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Camera;
-use App\PositionReport;
 use App\Student;
 
 class StudentPositionReports implements PositionReportsRepositoryInterface
@@ -17,25 +16,25 @@ class StudentPositionReports implements PositionReportsRepositoryInterface
 
     public function success(array $data)
     {
-    	$camera = Camera::findOrFail($data['camera_id']);
+        $camera = Camera::findOrFail($data['camera_id']);
 
-    	$student = Student::where('identifier', $data['identifier'])->firstOrFail();
+        $student = Student::where('identifier', $data['identifier'])->firstOrFail();
 
-    	return $student->reports()->create([
-    		'camera_id' => $camera->id,
-    		'successful' => true,
-    	]);
+        return $student->reports()->create([
+            'camera_id'  => $camera->id,
+            'successful' => true,
+        ]);
     }
 
     public function unsuccessful(array $data)
     {
-    	$camera = Camera::findOrFail($data['camera_id']);
+        $camera = Camera::findOrFail($data['camera_id']);
 
-    	$student = Student::where('identifier', $data['identifier'])->firstOrFail();
+        $student = Student::where('identifier', $data['identifier'])->firstOrFail();
 
-    	return $student->reports()->create([
-    		'camera_id' => $camera->id,
-    		'successful' => false,
-    	]);
+        return $student->reports()->create([
+            'camera_id'  => $camera->id,
+            'successful' => false,
+        ]);
     }
 }

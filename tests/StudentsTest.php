@@ -41,7 +41,7 @@ class StudentsTest extends TestCase
         dd($this->student->getKey(), Student::all());
         $this->json('POST', route('reports.student.success'), [
             'identifier' => $this->student->identifier,
-            'camera_id' => $this->camera->id
+            'camera_id'  => $this->camera->id,
         ])->assertResponseStatus(201);
     }
 
