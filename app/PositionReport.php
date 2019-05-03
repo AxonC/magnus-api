@@ -16,6 +16,6 @@ class PositionReport extends Model
 
     public function reportable()
     {
-    	return $this->morphTo();
+        return $this->morphTo();
     }
 }
