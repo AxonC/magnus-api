@@ -34,6 +34,10 @@ class Student extends Model
 
     public function getLocationAttribute()
     {
+        if ($this->reports->isEmpty()) {
+            return [];
+        }
+
         return $this->reports->last()->load('camera', 'camera.building', 'camera.building.campus');
     }
 }

@@ -78,11 +78,23 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
         ['as' => 'students.store', 'uses' => 'StudentsController@store']);
     $router->get('students/{id}',
         ['as' => 'students.show', 'uses' => 'StudentsController@show']);
+
+    $router->get('alerts',
+        ['as' => 'security.alert.index', 'uses' => 'SecurityAlertsController@index']);
+    $router->get('alerts/{id}',
+        ['as' => 'security.alert.show', 'uses' => 'SecurityAlertsController@show']);
+    $router->get('alerts/camera/{camera}',
+        ['as' => 'security.alert.show.camera', 'uses' => 'SecurityAlertsController@byCamera']);
 });
 
 $router->group(['middleware' => 'camera'], function () use ($router) {
     $router->get('camera/{id}',
         ['as' => 'camera.show', 'uses' => 'CamerasController@show']);
+
+    $router->post('alerts',
+        ['as' => 'security.alert.store', 'uses' => 'SecurityAlertsController@store']);
+    $router->patch('alerts/{id}/mark',
+        ['as' => 'security.alert.mark', 'uses' => 'SecurityAlertsController@update']);
 
     $router->post('reports/student/success',
         ['as' => 'reports.student.success', 'uses' => 'StudentPositionReportsController@success']);
