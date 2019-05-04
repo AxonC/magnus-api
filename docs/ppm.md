@@ -15,7 +15,7 @@ header-includes: |
 	\usepackage{pdflscape}
 ...
 
-<!--><--> # Abstract
+# Abstract
 
 Magnus Frater (or Big Brother) has been created to help tackle the ongoing issue of security within large open campuses and premises, these sorts of locations inherently have an increased potential for intrusion through unmonitored sections of land. The group analysed the recent spree of attacks on schools and offices (for example the shooting that occurred at the YouTube headquarters in 2018) and found that in a large amount of these attacks there were open doors and spaces that allowed the attacker to enter with ease. As a consequence to this, the idea of creating a facial recognition system to analyse and report known and unknown people within a campus/large open setting was conceived.
 
@@ -44,7 +44,9 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 
 \newpage
 
-<!--><--> # Table of Contents
+# Table of Contents
+- [Abstract](#abstract)
+- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 	- [Aims](#aims)
 	- [Objectives](#objectives)
