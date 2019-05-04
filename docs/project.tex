@@ -559,176 +559,176 @@ and manual testing.
 \toprule
 \begin{minipage}[b]{0.04\columnwidth}\raggedright
 FR\#\strut
-\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.15\columnwidth}\raggedright
 Function\strut
-\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\raggedright
 Goal\strut
 \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright
 Actor\strut
-\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright
 Justification\strut
-\end{minipage} & \begin{minipage}[b]{0.35\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\raggedright
 Importance Rating (out of 5)\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
 \begin{minipage}[t]{0.04\columnwidth}\raggedright
 1\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\raggedright
 Face Scanning\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
 A stationary camera is able to detect a face and scan certain data
 points for analysis\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
 Stationary Camera\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
 In order to provide a product that tracks people on a large campus, we
 must have an effective face scanning algorithm to track people across
 cameras\strut
-\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
 5 - This functionality is required for the system to work\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.04\columnwidth}\raggedright
 2\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\raggedright
 Position Reports can be filed\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
 Once a person has been identified all of the associated metadata is
 compiled and submitted as a report to the API\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
 Camera - Raspberry Pi\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
 In order to provide person tracking functionality the API must recieve
 compiled position reports to query at a later date, without these the
 application would loose a large portion of functionality.\strut
-\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
 5 - This functionality is required for the system to work properly\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.04\columnwidth}\raggedright
 3\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\raggedright
 New facial data can be added to the system\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
 An administrative user must be able to upload new facial data to be
 detected at a later point in time\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
 Administrative User\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
 In order to match new faces to current people, an original image of a
 persons face must be uploaded to the system so that the two images can
 be compared at a later date\strut
-\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
 5 - FR4 requires this function to exist\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.04\columnwidth}\raggedright
 4\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\raggedright
 New facial data is processed when uploaded to the web interface\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
 Once an image of a person has been uploaded the associated facial data
 points are created and stored\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
 API\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
 In order to compare two faces, the system needs to generate data points
 from the two images and then compare the data points to calculate who
 has been detected\strut
-\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
 5 - Without this functionality the system would not be able to discover
 people\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.04\columnwidth}\raggedright
 5\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\raggedright
 A person can be discovered when they have a valid position report\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
 If a member of the security team is looking for a person, they can
 search and find the related position reports\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
 Security Personnel\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
 A person must have position reports associated with them to allow the
 security team to search for them and discover their past or present
 location\strut
-\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
 3 - The application will still function without this, however a large
 piece of functionality would be missing\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.04\columnwidth}\raggedright
 6\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\raggedright
 A person can be located within a Campus/Location\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
 A person must be able to be located within a campus setting.\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
 Security Personnel\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
 In order to allow security personnel to find people within a certain
 location, there must be functionality to discover a person.\strut
-\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
 3 - The application will still function without this, however a large
 piece of functionality would be missing\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.04\columnwidth}\raggedright
 7\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\raggedright
 A temporary pass can be assigned to a person\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
 In order to be able to allow unknown users to walk around a campus
 without causing alerts a temporary pass can be assigned\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
 Security Personnel\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
 In order to lower the amount of False Negatives within a system,
 administrators can assign temporary passes that will allow unknown
 people to walk around the campus without causing alerts\strut
-\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
 4 - The application will still function without this, however a very
 important feature would be missing\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.04\columnwidth}\raggedright
 8\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\raggedright
 List Buildings\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
 Display a list of buildings\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
 Web Interface\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
 In order to display required information to users of the system, there
 must be functionality to display added buildings\strut
-\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
 4 - The application will still function without this, however a very
 important feature would be missing\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.04\columnwidth}\raggedright
 9\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\raggedright
 Add Buildings\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
 Add a building\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
 Web Interface\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
 In order to manage cameras, buildings must be added so that cameras can
 then be associated with them\strut
-\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
 4 - The application will still function without this, however a very
 important feature would be missing\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.04\columnwidth}\raggedright
 10\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\raggedright
 Add Cameras\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
 Add a camera\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
 Raspberry Pi\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
 In order to link person discovered with cameras a camera must first be
 enrolled onto the system, this occurs within the Python applications
 code\strut
-\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
 5 - This functionality is required for the system to work properly\strut
 \end{minipage}\tabularnewline
 \bottomrule

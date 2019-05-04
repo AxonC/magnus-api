@@ -88,7 +88,7 @@ To meet the requirements set out for the Raspberry Pi and API, we will have to e
 ## Functional Requirements
 
 | FR# | Function      | Goal  | Actor | Justification | Importance Rating (out of 5) |
-| --- | ------------- | ----- | ----- | ------------- | ---------------------------- |
+| --- | ------------- | --------------- | ----- | ----------------- | ------------------ |
 | 1   | Face Scanning | A stationary camera is able to detect a face and scan certain data points for analysis | Stationary Camera |In order to provide a product that tracks people on a large campus, we must have an effective face scanning algorithm to track people across cameras|5 - This functionality is required for the system to work|
 | 2   | Position Reports can be filed      | Once a person has been identified all of the associated metadata is compiled and submitted as a report to the API  |Camera - Raspberry Pi       |In order to provide person tracking functionality the API must recieve compiled position reports to query at a later date, without these the application would loose a large portion of functionality.             |5 - This functionality is required for the system to work properly      |
 | 3   |New facial data can be added to the system     | An administrative user must be able to upload new facial data to be detected at a later point in time    |   Administrative User    |In order to match new faces to current people, an original image of a persons face must be uploaded to the system so that the two images can be compared at a later date               |5 - FR4 requires this function to exist           |
