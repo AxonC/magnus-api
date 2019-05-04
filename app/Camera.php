@@ -19,6 +19,11 @@ class Camera extends Model
         return $this->belongsTo(Building::class);
     }
 
+    public function alerts()
+    {
+        return $this->hasMany(SecurityAlert::class);
+    }
+
     public function findByToken($token)
     {
         return $this->where('token', $token)->firstOrFail();

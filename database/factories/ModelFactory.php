@@ -80,3 +80,10 @@ $factory->define(App\Student::class, function (Faker\Generator $faker) {
         'start_year' => $faker->year,
     ];
 });
+
+$factory->define(App\SecurityAlert::class, function () {
+    return [
+        'camera_id' => factory(App\Camera::class),
+        'timestamp' => \Carbon\Carbon::now(),
+    ];
+});
