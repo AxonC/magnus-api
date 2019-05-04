@@ -83,6 +83,8 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
         ['as' => 'security.alert.index', 'uses' => 'SecurityAlertsController@index']);
     $router->get('alerts/{id}',
         ['as' => 'security.alert.show', 'uses' => 'SecurityAlertsController@show']);
+    $router->patch('alerts/{id}/mark',
+        ['as' => 'security.alert.mark', 'uses' => 'SecurityAlertsController@update']);
     $router->get('alerts/camera/{camera}',
         ['as' => 'security.alert.show.camera', 'uses' => 'SecurityAlertsController@byCamera']);
 });
@@ -93,8 +95,6 @@ $router->group(['middleware' => 'camera'], function () use ($router) {
 
     $router->post('alerts',
         ['as' => 'security.alert.store', 'uses' => 'SecurityAlertsController@store']);
-    $router->patch('alerts/{id}/mark',
-        ['as' => 'security.alert.mark', 'uses' => 'SecurityAlertsController@update']);
 
     $router->post('reports/student/success',
         ['as' => 'reports.student.success', 'uses' => 'StudentPositionReportsController@success']);
