@@ -87,6 +87,9 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
         ['as' => 'security.alert.mark', 'uses' => 'SecurityAlertsController@update']);
     $router->get('alerts/camera/{camera}',
         ['as' => 'security.alert.show.camera', 'uses' => 'SecurityAlertsController@byCamera']);
+
+    $router->get('dashboard/stats', 
+        ['as' => 'dashboard.stats', 'uses' => 'DashboardStatusController@index']);
 });
 
 $router->group(['middleware' => 'camera'], function () use ($router) {

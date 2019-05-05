@@ -40,7 +40,7 @@ class SecurityAlertsController extends Controller
 
         $alert->mark();
 
-        return response()->json(['succes' => 'Alert marked!']);
+        return response()->json(['success' => 'Alert marked!']);
     }
 
     public function show($id)

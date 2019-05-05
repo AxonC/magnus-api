@@ -17,7 +17,7 @@ class SecurityAlert extends Model
 
     public function mark()
     {
-        $this->attributes['actioned_at'] = \Carbon\Carbon::now();
+        $this->actioned_at = \Carbon\Carbon::now();
         $this->save();
     }
 }
