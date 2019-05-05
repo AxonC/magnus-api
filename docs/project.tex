@@ -478,7 +478,7 @@ cause further legal or ethical issues.
   \begin{itemize}
   \tightlist
   \item
-    \protect\hyperlink{aims}{Aims}
+    \protect\hyperlink{project-aims}{Project Aims}
   \item
     \protect\hyperlink{objectives}{Objectives}
   \end{itemize}
@@ -537,6 +537,32 @@ cause further legal or ethical issues.
     \protect\hyperlink{bcs-code-of-conduct}{BCS Code of Conduct}
   \end{itemize}
 \item
+  \protect\hyperlink{appendix}{Appendix}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \protect\hyperlink{use-cases}{Use Cases}
+  \item
+    \protect\hyperlink{screen-designs}{Screen Designs}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \protect\hyperlink{login}{Login}
+    \item
+      \protect\hyperlink{dashboard}{Dashboard}
+    \item
+      \protect\hyperlink{statistics}{Statistics}
+    \item
+      \protect\hyperlink{admin}{Admin}
+    \item
+      \protect\hyperlink{user-profile}{User Profile}
+    \item
+      \protect\hyperlink{elements-appendix}{Elements Appendix:}
+    \end{itemize}
+  \end{itemize}
+\item
   \protect\hyperlink{references}{References}
 \end{itemize}
 
@@ -545,8 +571,41 @@ cause further legal or ethical issues.
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-\hypertarget{aims}{%
-\subsection{Aims}\label{aims}}
+Over recent years, especially in the United States, attacks on schools
+or open campus locations have been increasing at an alarming rate.
+
+\includegraphics[width=0.5\textwidth,height=\textheight]{images/ppm-images/shootings.png}(GliderMaven
+2016)
+
+As you can see in the image above, there is a clear increase in mass
+shootings over the past few years, with a large percentage of these
+happening within schools or large open spaces. Current technology to
+prevent school shootings relies on hardening access to portions of the
+school or alerting people inside of an attack (through door barriers or
+locks and SMS messaging), however, this occurs after the shooting has
+begun and does not help to prevent the attack occurring in the first
+place.
+
+Based on these findings, it can be deduced that there needs to be
+technology implemented that helps to prevent an attack happening, rather
+than lessening the impact of an attack. This is where our projects
+objectives come into play, our technology will help to identify unknown
+people within a school or campus, before they even enter the building.
+Automatically alerting security personnel so that they can investigate
+further.
+
+We believe that this technology could greatly decrease the amount of
+potential attacks and could serve as a deterrent to people who want to
+commit a crime within an establishment that has the system installer.
+
+Furthermore, the system could be improved to link with local police
+facial databases in order to identify known criminals who are attempting
+to enter a school or other location.
+
+\newpage
+
+\hypertarget{project-aims}{%
+\subsection{Project Aims}\label{project-aims}}
 
 The main aim of the project is to provide organisations with open campus
 settings a way to effectively track and monitor who is on campus and
@@ -1547,6 +1606,24 @@ Security Alert Actioned Flag & & \textbf{Building}\tabularnewline
 
 \newpage
 
+\begin{landscape}
+
+\pagestyle{empty}
+
+\hypertarget{deployment-diagram}{%
+\section{Deployment Diagram}\label{deployment-diagram}}
+
+\begin{figure}
+    \makebox[\linewidth]{
+        \includegraphics[width=0.90\linewidth]{images/ppm-images/deployment-diagram.png}
+    }
+    \caption{Deployment Diagram} \label{fig:deployment-diagram}
+\end{figure}
+
+\end{landscape}
+
+\newpage
+
 \hypertarget{bcs-code-of-conduct}{%
 \subsection{BCS Code of Conduct}\label{bcs-code-of-conduct}}
 
@@ -1593,6 +1670,243 @@ health, privacy, security and wellbeing of others and the environment.}
 
 \newpage
 
+\hypertarget{appendix}{%
+\section{Appendix}\label{appendix}}
+
+\hypertarget{use-cases}{%
+\subsection{Use Cases}\label{use-cases}}
+
+\includegraphics{images/ppm-images/use-case-1.png} \newpage
+
+\includegraphics{images/ppm-images/use-case-2.png} \newpage
+
+\includegraphics{images/ppm-images/use-case-3.png} \newpage
+
+\includegraphics{images/ppm-images/use-case-4.png} \newpage
+
+\includegraphics{images/ppm-images/use-case-5.png} \newpage
+
+\includegraphics{images/ppm-images/use-case-6.png} \newpage
+
+\includegraphics{images/ppm-images/use-case-7.png} \newpage
+
+\hypertarget{screen-designs}{%
+\subsection{Screen Designs}\label{screen-designs}}
+
+\hypertarget{login}{%
+\subsubsection{Login}\label{login}}
+
+\begin{figure}
+\centering
+\includegraphics{images/ppm-images/login-design.png}
+\caption{Login Page}
+\end{figure}
+
+The login page will be the first page that the user will interact with.
+This will require a username / email and password to be entered in order
+to access the website. This will also contain a \enquote{Forgotten
+Password} button to give extra assistance to the user.
+
+\hypertarget{dashboard}{%
+\subsubsection{Dashboard}\label{dashboard}}
+
+\begin{figure}
+\centering
+\includegraphics{images/ppm-images/dashboard-design.png}
+\caption{Dashboard}
+\end{figure}
+
+The dashboard will be the first screen that the user views after logging
+in. This page will display general details about the system and how it
+is preforming, giving specific updates on new users, detections, unknown
+detections, etc. This will also show specific data on camera activity,
+showing which cameras have detected what user type, or if it has
+detected and invalid user.
+
+\hypertarget{statistics}{%
+\subsubsection{Statistics}\label{statistics}}
+
+\begin{figure}
+\centering
+\includegraphics{images/ppm-images/statistics-design.png}
+\caption{Statistics}
+\end{figure}
+
+The statistics page will show the user all of the relative data
+regarding user activity. This page includes a graph which will show
+specified user activity between campus locations. The specified user
+will be changeable by a set of buttons at the top of the screen. The
+statistics page will also display campus activity in specific buildings.
+
+\hypertarget{admin}{%
+\subsubsection{Admin}\label{admin}}
+
+\begin{figure}
+\centering
+\includegraphics{images/ppm-images/admin-design.png}
+\caption{Admin}
+\end{figure}
+
+The admin page will allow the user the create and edit data. This data
+may be regarding a permanent user, temporary user, or a camera. This
+page will be used in order to view users' profiles, add users, edit
+current user's data, find specific locational data and also find
+specific camera data.
+
+\hypertarget{user-profile}{%
+\subsubsection{User Profile}\label{user-profile}}
+
+\begin{figure}
+\centering
+\includegraphics{images/ppm-images/profile-design.png}
+\caption{User Profile}
+\end{figure}
+
+The profile page will show the user the chosen user's profile
+information. This will contain basic information about the user,
+including name, course, year, attendance, location, and activity. The
+default user for this page will be the profile that is associated with
+the current log-in. Other user's will be able to be accessed by the
+admin page through selecting a user and then the profile button.
+
+\hypertarget{elements-appendix}{%
+\subsubsection{Elements Appendix:}\label{elements-appendix}}
+
+Login:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Username Input
+\item
+  Password Input\\
+\item
+  Sign in Button
+\end{enumerate}
+
+Dashboard:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Dashboard
+\item
+  Profile
+\item
+  Statistics\\
+\item
+  Admin\\
+\item
+  Logout\\
+\item
+  Total Users Detected
+\item
+  New Users
+\item
+  Valid Detections
+\item
+  Invalid Detections
+\item
+  Most Used Cameras
+\item
+  Current Campus Population
+\item
+  Camera Details (Detections)
+\item
+  Location Details (Population)
+\end{enumerate}
+
+Statistics:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Dashboard
+\item
+  Profile
+\item
+  Statistics
+\item
+  Admin
+\item
+  Logout\\
+\item
+  \enquote{Students} Button
+\item
+  \enquote{Teachers} Button
+\item
+  \enquote{Guests} Button
+\item
+  Specified User Activity Graph
+\item
+  Locational Data (Population \%)
+\end{enumerate}
+
+Admin:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Dashboard
+\item
+  Profile
+\item
+  Statistics
+\item
+  Admin
+\item
+  Logout
+\item
+  Total Users
+\item
+  Current Population
+\item
+  Invalid Detections
+\item
+  Users Tab
+\item
+  Cameras and Locations Tab
+\item
+  Data Table Categories
+\item
+  Records of Data Table
+\end{enumerate}
+
+Profile:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Dashboard
+\item
+  Profile\\
+\item
+  Statistics
+\item
+  Admin
+\item
+  Logout
+\item
+  Profile Image
+\item
+  Basic Data (Name, Course)
+\item
+  Attendance
+\item
+  Current Location
+\item
+  Favoured Location
+\item
+  Detections Table
+\item
+  Total Activity Breakdown
+\end{enumerate}
+
 \hypertarget{references}{%
 \section*{References}\label{references}}
 \addcontentsline{toc}{section}{References}
@@ -1605,6 +1919,11 @@ health, privacy, security and wellbeing of others and the environment.}
 \leavevmode\hypertarget{ref-doran1981there}{}%
 Doran, George T. 1981. ``There'sa Smart Way to Write Management's Goals
 and Objectives.'' \emph{Management Review} 70 (11): 35--36.
+
+\leavevmode\hypertarget{ref-glidermaven}{}%
+GliderMaven. 2016. ``Total Deaths in Us Mass Shootings.''
+\emph{GliderMaven}. Wikipedia.
+\url{https://commons.wikimedia.org/w/index.php?curid=50124456}.
 
 \leavevmode\hypertarget{ref-agencies_2018}{}%
 Staff, The Guardian, and Agencies. 2018. ``YouTube Hq Shooting: Police

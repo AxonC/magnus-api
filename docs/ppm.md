@@ -50,7 +50,7 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 - [Abstract](#abstract)
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
-	- [Aims](#aims)
+	- [Project Aims](#project-aims)
 	- [Objectives](#objectives)
 - [Project Management](#project-management)
 	- [Meetings](#meetings)
@@ -68,13 +68,36 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 - [Normalisation](#normalisation)
 - [Context Diagram](#context-diagram)
 	- [BCS Code of Conduct](#bcs-code-of-conduct)
+- [Appendix](#appendix)
+	- [Use Cases](#use-cases)
+	- [Screen Designs](#screen-designs)
+		- [Login](#login)
+		- [Dashboard](#dashboard)
+		- [Statistics](#statistics)
+		- [Admin](#admin)
+		- [User Profile](#user-profile)
+		- [Elements Appendix:](#elements-appendix)
 - [References](#references)
 
 \newpage
 
 # Introduction
 
-## Aims
+Over recent years, especially in the United States, attacks on schools or open campus locations have been increasing at an alarming rate.
+
+![Image showing the increase in mass shootings within the US](images/ppm-images/shootings.png){width=50%}[@glidermaven]
+
+As you can see in the image above, there is a clear increase in mass shootings over the past few years, with a large percentage of these happening within schools or large open spaces. Current technology to prevent school shootings relies on hardening access to portions of the school or alerting people inside of an attack (through door barriers or locks and SMS messaging), however, this occurs after the shooting has begun and does not help to prevent the attack occurring in the first place.
+
+Based on these findings, it can be deduced that there needs to be technology implemented that helps to prevent an attack happening, rather than lessening the impact of an attack. This is where our projects objectives come into play, our technology will help to identify unknown people within a school or campus, before they even enter the building. Automatically alerting security personnel so that they can investigate further.
+
+We believe that this technology could greatly decrease the amount of potential attacks and could serve as a deterrent to people who want to commit a crime within an establishment that has the system installer.
+
+Furthermore, the system could be improved to link with local police facial databases in order to identify known criminals who are attempting to enter a school or other location.
+
+\newpage	
+
+## Project Aims
 The main aim of the project is to provide organisations with open campus settings a way to effectively track and monitor who is on campus and where they are located at any time of day. This is to help reduce or prevent intrusions and attacks that occur on these types of locations.
 
 ## Objectives
@@ -349,6 +372,24 @@ deadline.
 
 \newpage
 
+\begin{landscape}
+
+\pagestyle{empty}
+
+\hypertarget{deployment-diagram}{%
+\section{Deployment Diagram}\label{deployment-diagram}}
+
+\begin{figure}
+    \makebox[\linewidth]{
+		\includegraphics[width=0.90\linewidth]{images/ppm-images/deployment-diagram.png}
+    }
+	\caption{Deployment Diagram} \label{fig:deployment-diagram}
+\end{figure}
+
+\end{landscape}
+
+\newpage
+
 ## BCS Code of Conduct
 
 In order to make our project as efficient as possible, the group decided that it will essential to use the British Computer Society’s (BCS) code of conduct, so it can guide us with professional standards and be aware of our responsibilities to each other and the public. 
@@ -362,5 +403,137 @@ With that said this brings us to another matter, any form of discrimination was 
 It is important to say that we worked on this project for the public interest. We wanted to provide security and efficiency. With this product we want to saver time for the public and make there lives easier. Of course, the privacy of the public is our priority, we implemented restricted access to our product, so only personal that have a username and password can access the private data. With the BCS code of conduct stating, “You shall have due regard for public health, privacy, security and wellbeing of others and the environment.” [@bcs].
 
 \newpage
+
+# Appendix
+
+## Use Cases
+
+![Use Case 1](images/ppm-images/use-case-1.png)
+\newpage
+
+![Use Case 2](images/ppm-images/use-case-2.png)
+\newpage
+
+![Use Case 3](images/ppm-images/use-case-3.png)
+\newpage
+
+![Use Case 4](images/ppm-images/use-case-4.png)
+\newpage
+
+![Use Case 5](images/ppm-images/use-case-5.png)
+\newpage
+
+![Use Case 6](images/ppm-images/use-case-6.png)
+\newpage
+
+![Use Case 7](images/ppm-images/use-case-7.png)
+\newpage
+
+
+## Screen Designs
+
+### Login
+
+![Login Page](images/ppm-images/login-design.png)
+
+The login page will be the first page that the user will interact with. This will require a username / email and password to be entered in order to access the website. This will also contain a ‘Forgotten Password’ button to give extra assistance to the user. 
+
+
+### Dashboard
+
+![Dashboard](images/ppm-images/dashboard-design.png)
+
+The dashboard will be the first screen that the user views after logging in. This page will display general details about the system and how it is preforming, giving specific updates on new users, detections, unknown detections, etc. This will also show specific data on camera activity, showing which cameras have detected what user type, or if it has detected and invalid user.   
+
+
+### Statistics
+
+![Statistics](images/ppm-images/statistics-design.png)
+
+The statistics page will show the user all of the relative data regarding user activity. This page includes a graph which will show specified user activity between campus locations. The specified user will be changeable by a set of buttons at the top of the screen. The statistics page will also display campus activity in specific buildings.  
+
+### Admin
+
+![Admin](images/ppm-images/admin-design.png)
+
+The admin page will allow the user the create and edit data. This data may be regarding a permanent user, temporary user, or a camera. This page will be used in order to view users’ profiles, add users, edit current user’s data, find specific locational data and also find specific camera data.  
+
+### User Profile
+
+![User Profile](images/ppm-images/profile-design.png)
+
+The profile page will show the user the chosen user’s profile information. This will contain basic information about the user, including name, course, year, attendance, location, and activity. The default user for this page will be the profile that is associated with the current log-in. Other user’s will be able to be accessed by the admin page through selecting a user and then the profile button.  
+
+### Elements Appendix: 
+
+Login: 
+
+1. Username Input
+2. Password Input  
+3. Sign in Button  
+   
+Dashboard: 
+
+1. Dashboard 
+2. Profile 
+3. Statistics              
+4. Admin          
+5. Logout         
+6. Total Users Detected 
+7. New Users
+8. Valid Detections
+9. Invalid Detections
+10. Most Used Cameras
+11. Current Campus Population
+12. Camera Details (Detections)
+13. Location Details (Population)                                                                         
+
+Statistics: 
+
+1. Dashboard
+2. Profile 
+3. Statistics
+4. Admin
+5. Logout  
+6. "Students" Button
+7. "Teachers" Button
+8. "Guests" Button
+9. Specified User Activity Graph
+10. Locational Data (Population %)
+ 
+
+Admin: 
+
+1. Dashboard 
+2. Profile
+3. Statistics 
+4. Admin
+5. Logout
+6. Total Users
+7. Current Population
+8. Invalid Detections
+9. Users Tab
+10. Cameras and Locations Tab
+11. Data Table Categories
+12. Records of Data Table
+
+Profile: 
+
+1. Dashboard
+2. Profile  
+3. Statistics
+4. Admin
+5. Logout
+6. Profile Image
+7. Basic Data (Name, Course)
+8. Attendance
+9. Current Location
+10. Favoured Location
+11. Detections Table
+12. Total Activity Breakdown
+
+ 
+
+
 
 # References
