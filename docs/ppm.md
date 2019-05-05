@@ -52,6 +52,16 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 - [Introduction](#introduction)
 	- [Aims](#aims)
 	- [Objectives](#objectives)
+- [Project Management](#project-management)
+	- [Meetings](#meetings)
+		- [General Absence](#general-absence)
+		- [Authorised Absence](#authorised-absence)
+		- [Absence Procedure](#absence-procedure)
+	- [Management](#management)
+		- [Project Manager](#project-manager)
+		- [Task Allocation](#task-allocation)
+	- [Team Members, Responsibility & Skills](#team-members-responsibility--skills)
+- [Risk Assessment](#risk-assessment)
 - [Requirements](#requirements)
 	- [Functional Requirements](#functional-requirements)
 	- [Non-Functional Requirements](#non-functional-requirements)
@@ -198,14 +208,14 @@ deadline.
 # Risk Assessment
 
 | ID  | Description | Impact | Probability | Response |
-| --- | ----------- | ------ | ----------- | -------- |
-| RE1 | Team member is ill, injured or cannot work on project due to personal reasons| High | Low | Reorganise workload to cover team member. |
-| RE2 | Team member attend meetings due to a busy university schedule | Medium | Low | Organise more meetings at a common available time. Alternatively, use a digital solution |
+| --- | ----------- | ------ | -------- | ---------------- |
+| RE1 | Team member is ill, injured or cannot work on project due to personal reasons| High | Medium | Reorganise workload to cover team member. |
+| RE2 | Team member does not attend meetings due to a busy university schedule | Medium | Low | Organise more meetings at a common available time. Alternatively, use a digital solution |
 | RE3 | Team member consistently not doing work, time schedule falls at least a week behind | High | Medium | Assign multiple members to the same task - enabling redundancy |
-| RE4 | Data Loss | High | Medium | Ensure a regular backup of work is taken. Use version control systems (VCS) for code & store in cloud. |
-| RE5 | Deadline Changes | Medium | Low | If deadline is earlier than before, change work schedule to account
-for it. |
+| RE4 | Data Loss | High | Low | Ensure a regular backup of work is taken. Use version control systems (VCS) for code & store in cloud. |
+| RE5 | Deadline Changes | Medium | Low | If deadline is earlier than before, change work schedule to account for it. |
 | RE6 | Missed Internal Deadlines | Very High | Low | Workload reorganised to complete project ahead of schedule, meetings to identify problems causing missed deadlines. |
+| RE7 | Team member leaves module/course | Very High | Low | Assign multiple members the same task, enabling redundancy, also ensure that all team members have open communication methods so that an early warning can be provided |
 
 \newpage
 
