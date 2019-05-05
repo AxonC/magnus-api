@@ -208,7 +208,7 @@ deadline.
 # Risk Assessment
 
 | ID  | Description | Impact | Probability | Response |
-| --- | ----------- | ------ | -------- | ---------------- |
+| --- | ----------- | ------ | ------ | ------------- |
 | RE1 | Team member is ill, injured or cannot work on project due to personal reasons| High | Medium | Reorganise workload to cover team member. |
 | RE2 | Team member does not attend meetings due to a busy university schedule | Medium | Low | Organise more meetings at a common available time. Alternatively, use a digital solution |
 | RE3 | Team member consistently not doing work, time schedule falls at least a week behind | High | Medium | Assign multiple members to the same task - enabling redundancy |
@@ -216,6 +216,10 @@ deadline.
 | RE5 | Deadline Changes | Medium | Low | If deadline is earlier than before, change work schedule to account for it. |
 | RE6 | Missed Internal Deadlines | Very High | Low | Workload reorganised to complete project ahead of schedule, meetings to identify problems causing missed deadlines. |
 | RE7 | Team member leaves module/course | Very High | Low | Assign multiple members the same task, enabling redundancy, also ensure that all team members have open communication methods so that an early warning can be provided |
+| RE8 | Domineering personalities | Low | Low | If there is a dominant personality in the group which causes other members to feel unable to contribute, then limits could be made on individual contributions, also it is important that when members are speaking they have no interruption. Remind all the members of the group that it is important to hear and respect all opinions in relation to the topic. |
+| RE9 | Working with team members during non-term time | Medium | Low | If it is required for us to work with team members during non-term time then it will be important for us to have good communication so that all the team members still know what their roles are and what work need to be completed. |
+| RE10 | ICT resources may not be adequate or appropriately available for the demands of the project | Medium | Low | If ICT resources are inadequate then consider using external sources to reach the goals needed to complete the project to a good standard. |
+| RE11 | Team members finding topics or concepts difficult to grasp | Medium | Medium | Try help the team member to understand the topic they’re working on, however if they still don’t understand suggest a switch of topic or role on the project. |
 
 \newpage
 
@@ -318,7 +322,7 @@ deadline.
 
 \begin{figure}
     \makebox[\linewidth]{
-		\includegraphics[width=0.95\linewidth]{images/ppm-images/level-0-dfd.png}
+		\includegraphics[width=0.90\linewidth]{images/ppm-images/level-0-dfd.png}
     }
 	\caption{Level 0 DFD} \label{fig:level0dfd}
 \end{figure}
