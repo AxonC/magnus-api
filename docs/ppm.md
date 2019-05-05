@@ -195,6 +195,20 @@ deadline.
 | Wing Lam Chiang | Documentation & Database | SQL - PHP - Project Management Software
 \newpage
 
+# Risk Assessment
+
+| ID  | Description | Impact | Probability | Response |
+| --- | ----------- | ------ | ----------- | -------- |
+| RE1 | Team member is ill, injured or cannot work on project due to personal reasons| High | Low | Reorganise workload to cover team member. |
+| RE2 | Team member attend meetings due to a busy university schedule | Medium | Low | Organise more meetings at a common available time. Alternatively, use a digital solution |
+| RE3 | Team member consistently not doing work, time schedule falls at least a week behind | High | Medium | Assign multiple members to the same task - enabling redundancy |
+| RE4 | Data Loss | High | Medium | Ensure a regular backup of work is taken. Use version control systems (VCS) for code & store in cloud. |
+| RE5 | Deadline Changes | Medium | Low | If deadline is earlier than before, change work schedule to account
+for it. |
+| RE6 | Missed Internal Deadlines | Very High | Low | Workload reorganised to complete project ahead of schedule, meetings to identify problems causing missed deadlines. |
+
+\newpage
+
 # Requirements
  
 ## Functional Requirements
