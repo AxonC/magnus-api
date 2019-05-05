@@ -93,6 +93,108 @@ To meet the requirements set out for the Raspberry Pi and API, we will have to e
 
 \newpage
 
+# Project Management
+
+## Meetings
+Group meetings should occur at least once a week during term
+time.This may be altered and increased dependent on any deadlines
+that the group decide are enough of an impact to call extra meetings.
+The current meetings have an estimated length of 30 minutes to an hour,
+being held in a work-appropriate environment, such as a meeting room. IT can be useful to utilise software which allows the use of voice communication to enable remote working.
+It is possible that there will be instances in which not all the group will
+be able to meet. This may be caused through a great many scenario, each
+of which should be able to be resolved, given consideration and following a
+standard procedure. Some of the scenarios, and correct procedures to take
+in the event of said scenario, can be seen below:
+
+### General Absence
+In the case of a general absence, being that a member of the group is absent
+without meaningful reason, the group may have to consider the situation
+the absent member may be in. The consideration being the current group
+position, the importance of the absent member’s role, or contribution that
+may have been needed in the current session. In this event, the group may
+need to note down the general absence and keep track of the amount each
+member has committed, as many of these may show a lack of commitment
+to the project. A given example of this scenario is - ”Marcus missed the
+meeting because he went to go see a movie.”
+
+### Authorised Absence
+
+In the event of an authorised absence, in which the member who is absent has
+given compelling reason and possibly proof if required, the member would
+be excused from the current session. For this scenario to be distinguishable
+from a general absence is down to a few possibilities: forewarning of absence
+with given reasoning and a group consensus to pass this absence, an event in
+which the member would not be able to attend due to reasoning outside of
+their control, or an unavoidable event where the member has no real ability
+to alter A given example of this scenario is - ”Jess couldn’t make it to the
+meeting as she had a medical appointment.”
+
+### Absence Procedure
+
+In either of the circumstances mentioned above, the same procedure is taken.
+This is to ensure that the missing member will be able to catch up on the
+meeting that they missed, allowing for minimal drawbacks from the absence.
+For a team member to be considered ’fully informed, for the meeting of
+absence, the team must follow the stages below. A team member(s) who was
+present in said meeting must contact the absentee, giving a small briefing
+as well as the minutes of the meeting. This should be followed with any
+decisions or changes decided within the meeting, if not already noted down
+in the minuets. Furthermore, the absentee should be asked if they have
+any questions about the information given to them, to ensure that they are
+sound minded on the group’s current position, as well as each individual’s
+tasks.
+
+## Management
+
+### Project Manager
+
+A member should be elected as Project Manager (PM), the role responsible
+to tracking information on the group members, as well as being the first to
+act on any events which may disrupt the project. PM will handle the attendance
+of the group during all forms of meetings, as well as the punctuality
+of tasks from each of the group. It will be the PM’s duty to talk to any
+members who show deviation from a consistent work ethic, ensuring that
+the member knows their tasks and is on track. If the PM finds the need to
+call a discussion with the group on a member’s behaviour and commitment
+toward the project they can initiate a vote to exclude the member from the
+group, with warning and consultation. The PM may find it useful to pass off a secondary role to another team member to ensure that the project is
+being fully watched. The deputy should report back to the PM with any
+extra information they have found to be added to their current information
+on the group.
+
+### Task Allocation
+
+For the group to work as well as they can with minimal conflict, when a
+task is presented to the group they will be asked to whom would like to take
+on said task. If there is a conflict on the task allocation, it may be able
+to split the task into smaller subtasks; thus, allowing for multiple members
+to work on it. However, if the situation does not allow for this then a
+fair discussion will be made to decide which member will be assigned the
+task. Upon being assigned a task, the member will be given a deadline
+for the task to be complete, the deadline may be flexible, allowing for the
+member to negotiate and discuss with the team. When each member of the
+team is working on a task, the PM will ask for progress reports at intervals
+throughout each task. The PM will report to the team if any anomalies
+occur, allowing the team to propose ideas to ensure completion before its
+deadline.
+
+\newpage
+
+## Team Members, Responsibility & Skills
+
+**Project Manager**: Callum Axon 
+
+| Name | Responsible For | Relevant Skills |
+| ---- | --------------- | --------------- |
+| Callum Axon | Backend Database & API | - PHP - MySQL - UML Tooling - Testing - Server Management |
+| Callum Carney | Monitoring Application | - HTML & CSS - JavaScript, Testing |
+| Finlay McKinnon | Monitoring Application | - HTML & CSS - Screen & Graphic Design |
+| Jordan Brightmore | Facial Recognition Software | Python - Machine Learning - Raspiban - Computer Vision |
+| Vital Harachka | Backend Database | SQL - PHP |
+| Wing Lam Chiang | Documentation & Database | SQL - PHP - Project Management Software
+\newpage
+
 # Requirements
  
 ## Functional Requirements
