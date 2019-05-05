@@ -52,6 +52,7 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 	- [Objectives](#objectives)
 - [Requirements](#requirements)
 	- [Functional Requirements](#functional-requirements)
+	- [Non-Functional Requirements](#non-functional-requirements)
 - [References](#references)
 
 \newpage
@@ -96,9 +97,36 @@ To meet the requirements set out for the Raspberry Pi and API, we will have to e
 |5|A person can be discovered when they have a valid position report|If a member of the security team is looking for a person, they can search and find the related position reports|Security Personnel|A person must have position reports associated with them to allow the security team to search for them and discover their past or present location |3 - The application will still function without this, however a large piece of functionality would be missing|
 |6|A person can be located within a Campus/Location|A person must be able to be located within a campus setting.|Security Personnel|In order to allow security personnel to find people within a certain location, there must be functionality to discover a person.|3 - The application will still function without this, however a large piece of functionality would be missing|
 |7|A temporary pass can be assigned to a person|In order to be able to allow unknown users to walk around a campus without causing alerts a temporary pass can be assigned|Security Personnel|In order to lower the amount of False Negatives within a system, administrators can assign temporary passes that will allow unknown people to walk around the campus without causing alerts|4 - The application will still function without this, however a very important feature would be missing|
-|8|List Buildings|Display a list of buildings|Web Interface|In order to display required information to users of the system, there must be functionality to display added buildings|4 - The application will still function without this, however a very important feature would be missing|
-|9|Add Buildings|Add a building|Web Interface|In order to manage cameras, buildings must be added so that cameras can then be associated with them|4 - The application will still function without this, however a very important feature would be missing|
-|10|Add Cameras|Add a camera|Raspberry Pi|In order to link person discovered with cameras a camera must first be enrolled onto the system, this occurs within the Python applications code|5 - This functionality is required for the system to work properly|
+|8|List Campuses|Display a list of Campuses|Web Interface|In order to display required information to users of the system, there must be functionality to display added campuses|4 - The application will still function without this, however a very important feature would be missing|
+|9|Add Campuses|Add a Campus|Web Interface|In order to manage buildings, campuses must be added so that buildings can then be associated with them|5 - This functionality is required for the system to work properly|
+|10|Remove Campuses|Remove a campus|Web Interface|A campus may no longer be required or may be phased out, therefore the ability to remove campuses must be included|4 - The application will still function without this, however a very important feature would be missing|
+|11|List Buildings|Display a list of buildings|Web Interface|In order to display required information to users of the system, there must be functionality to display added buildings|4 - The application will still function without this, however a very important feature would be missing|
+|12|Add Buildings|Add a building|Web Interface|In order to manage cameras, buildings must be added so that cameras can then be associated with them|5 - This functionality is required for the system to work properly|
+|13|Remove Buildings|Remove a building|Web Interface|A building may no longer be required or may be phased out, therefore the ability to remove buildings must be included|4 - The application will still function without this, however a very important feature would be missing|
+|14|Add Cameras|Add a camera|Raspberry Pi|In order to link person discovered with cameras a camera must first be enrolled onto the system, this occurs within the Python applications code|5 - This functionality is required for the system to work properly|
+|15|List Cameras|Display a list of Cameras|Web Interface|In order to display required information to users of the system, there must be functionality to display added cameras|4 - The application will still function without this, however a very important feature would be missing|
+|16|Update Cameras|Update a camera|Web Interface|A camera may have its location or information changed therefore, there must be functionality to update added cameras|4 - The application will still function without this, however a very important feature would be missing|
+|17|Remove Cameras|Remove a camera|Web Interface|A camera may no longer be required or may have been phased out therefore, there must be functionality to delete added cameras|4 - The application will still function without this, however a very important feature would be missing|
+|18|List Users|List Users|Web Interface|Administrators need to be able to list users to see who is administrating their system and what people have been registered|4 - The application will still function without this, however a very important feature would be missing|
+|19|View Users|View Users|Web Interface|Administrators should be able to view user profiles which should include statistics in regards to current and previous locations|3 - If possible, the system should have this implemented as it would be an excellent feature to have, however it is not critical to the functioning of the system|
+|20|Add Users|Add Users|Web Interface|Administrators need to be able to add users to the system, this could be for administrative purposes or just adding a low level user|4 - The application will still function without this, however a very important feature would be missing|
+|21|Remove Users|Remove Users|Web Interface|Administrators need to be able to list users to see who is administrating their system and what people have been registered|4 - The application will still function without this, however a very important feature would be missing|
+|22|List Statistics|List Statistics|Web Interface|Administrators should be able to look at statistics of their systems for example, what location is most popular, etc |2 - The application does not need or require this functionality, it is purely a quality of life improvement, however it would be a great advantage for administrators of the system|
+|23|React to Alerts|React to Alerts|Web Interface|Administrators and security personnel must be able to react (false negative, resolved) to alerts of unknown users on Campus in order to remove an unknown user listing|5 - The core objective of this system is that organisations can react to unknown people activity, therefore this functionality needs to be included|
+
+## Non-Functional Requirements
+
+| NFR# | Function      | Goal  | Actor | Importance Rating (out of 5) |
+| --- | --------------- | --------------- | --------- | ----------------- | ------------------ |
+| 1   | Be usable | The system should be usable by any users with varying levels of computer proficiencies | Administrators |5|
+| 2   | Performance  | The system should be fast and responsive when administrators are using the Web Interface| Administrators |4|
+| 3   | Be easy to setup | Cameras should be easy to setup and link into the web interface| System Installer |3|
+| 4   | Automated Backup | The system should have an automated backup for the facial data to prevent loss of authorised users| Administrators |3|
+| 5   | Language | The system should have a variety of languages available in order to cater for non english speakers| Administrators |2|
+| 6   | Security | The system should be inherently secure and all data should be held in a secure facility/location| Administrators |5|
+
+
+
 
 
 # References
