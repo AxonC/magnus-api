@@ -27,7 +27,7 @@ class DashboardStatusController extends Controller
 
                     return $model->setAttribute('success_rate', round($success_rate, 2));
                 }),
-            ]
-    	]);
+            ],
+        ]);
     }
 }
