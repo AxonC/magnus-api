@@ -137,7 +137,9 @@ To meet the requirements set out for the Raspberry Pi and API, we will have to e
 
 ## Product Demand
 
-While there is no direct demand for this product, this could just be down to the fact that organisations and 
+While there is no direct demand for this product, this could just be down to the fact that organisations and people do not know that this technology is possible and that it can be easily installed into their campuses. With more visibility around this product we believe that there would be significant interest, especially from Universities and Companies with open campuses in the United States. After conducting market research, it was discovered that some organisations in China have adopted the facial recognition approach for identifying users [@china-facialrec] and that it is working well for the organisations in question. [@china-facerec]
+
+The unfortunate upward trend of school shooting and attacks on open campuses will lead to more interest in facial recognition software to help prevent, rather than lessen the impact of an attack.
 
 # Project Management
 
