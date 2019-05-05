@@ -125,9 +125,45 @@ To meet the requirements set out for the Raspberry Pi and API, we will have to e
 | 5   | Language | The system should have a variety of languages available in order to cater for non english speakers| Administrators |2|
 | 6   | Security | The system should be inherently secure and all data should be held in a secure facility/location| Administrators |5|
 
+\newpage
 
+# Normalisation
 
-
+| UNF                          | 1NF                            | 2NF & 3NF          |
+| ---------------------------- | ------------------------------ | ------------------ | 
+| *Person ID                   | **Person**                     | **Person**         | 
+| Person First Name            | \*Person ID                    | \*Person ID        |
+| Person Last Name             |   First Name                   | First Name         |
+| Date of Birth                |   Last Name                    | Last Name          |
+| Gender                       |   Date of Birth                | Date of Birth      |
+| Camera ID                    |   Gender                       | Gender             |
+| Camera Name                  |                                |                    |
+| Camera Address               | **Camera**                     | **Camera**         |
+| Camera Active Flag           | \*Camera ID                    | \*Camera ID        |
+| Campus Name                  |                                | #*Building ID*     |
+| Campus Address               |  Camera Name                   | Name               |
+|                              |  Camera Address                | Address            |
+| Campus City                  |  Camera Active Flag            | Active Flag        |
+| Campus County                |  Campus Name                   |                    |
+| Campus Postcode              |  Campus Address                | **Campus**         |
+| Building Name                |  Campus City                   | Campus ID          |
+| Position Report ID           |  Campus County                 | Name               |
+| Position Report Camera       |  Campus Postcode               | Address            |
+| Position Report Building     |  Building Name                 | City               |
+| Position Report Campus       |  Position Report ID            | County             |
+| Security Alert ID            |  Security Alert ID             | Postcode           |
+| Security Alert Camera        |  Security Alert Timestamp      |                    |
+| Security Alert Timestamp     |  Security Alert Actioned Flag  | **Building**       |
+| Security Alert Actioned Flag |                                | Building ID        |
+|                              |                                | #*Campus ID*       |
+|                              |                                | Name               |
+|                              |                                |                    |
+|                              |                                | **Security Alert** |
+|                              |                                | Security Alert ID  |
+|                              |                                | #*Camera ID*       |
+|                              |                                | Timestamp          |
+|                              |                                | Actioned Flag      |
+|                              |                                |                    |
 
 # References
 
