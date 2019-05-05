@@ -15,9 +15,11 @@ header-includes: |
 	\usepackage{pdflscape}
 ...
 
+[comment]: <> (pandoc --filter pandoc-citeproc --bibliography=./references.bib -s ppm.md -o project.pdf --template eisvogel)
+
 # Abstract
 
-Magnus Frater (or Big Brother) has been created to help tackle the ongoing issue of security within large open campuses and premises, these sorts of locations inherently have an increased potential for intrusion through unmonitored sections of land. The group analysed the recent spree of attacks on schools and offices - for example the shooting that occurred at the YouTube headquarters in 2018 @agencies_2018 - and found that in a large amount of these attacks there were open doors and spaces that allowed the attacker to enter with ease. As a consequence to this, the idea of creating a facial recognition system to analyse and report known and unknown people within a campus/large open setting was conceived.
+Magnus Frater (or Big Brother) has been created to help tackle the ongoing issue of security within large open campuses and premises, these sorts of locations inherently have an increased potential for intrusion through unmonitored sections of land. The group analysed the recent spree of attacks on schools and offices - for example the shooting that occurred at the YouTube headquarters in 2018 [@agencies_2018] - and found that in a large amount of these attacks there were open doors and spaces that allowed the attacker to enter with ease. As a consequence to this, the idea of creating a facial recognition system to analyse and report known and unknown people within a campus/large open setting was conceived.
 
 As mentioned, the main purpose of the project was to create a system that would accurately detect and report people walking around an area to the associated security team, this data would differentiate between employees or authorised users and unknown people by linking into the companies employee/student database. Not only would this allow a security team to monitor who is within a set area at any one time, but it would also allow administrative users to track any persons movements and activities within a set time frame, through tracking of the targets face across multiple cameras. Another advantage to this project is that administrative users can view analytics in relation to the usage of campus properties, an example use case for this would be within a University. Admins could check what buildings within the campus are being utilised most by students.  
 
@@ -67,19 +69,22 @@ The main aim of the project is to provide organisations with open campus setting
 
 ## Objectives
 
-To ensure clear and appropriate objectives have been created for the project, the S.M.A.R.T. (specific, measurable, achievable/appropriate, realistic, time-constrained) goals  were used. SMART allows us to create objectives that provide the project with lots of functionality, that will be meaningful to the objects, and still stay within the projects deadlines. For the project to be successful the following objectives should be met:
+To ensure clear and appropriate objectives have been created for the project, the S.M.A.R.T. (specific, measurable, achievable/appropriate, realistic, time-constrained) goals [@doran1981there] were used. SMART allows us to create objectives that provide the project with lots of functionality, that will be meaningful to the objects, and still stay within the projects deadlines. For the project to be successful the following objectives should be met:
 
 Staff Members should be able to:
-* Add new faces or people to the system through a simple yet effective web interface;
-* Monitor the movements of people across buildings and campuses, whether they are registered as people or not;
-* Manage alerts of unknown people entering the campus;
+
+* Add new faces or people to the system through a simple yet effective web interface 
+* Monitor the movements of people across buildings and campuses, whether they are registered as people or not
+* Manage alerts of unknown people entering the campus
 * Provide temporary passes to unknown people to authorize them for a set amount of time;
 
 As a requirement to this, the camera and associated Raspberry Pi module should be able to provide the following:
+
 * A stream of video that can be analysed by the algorithm on the Pi in order to find faces;
 * A constant stream of face detections to the central server that manages all hits;
 
 In general the following objective should be met:
+
 * The camera and web interface should be able to talk to each other through an API (Application Programming Interface)
 
 To meet the objectives set out for Staff Members, the group will be creating a web interface using NodeJS, this interface will have the functionality set out above and will interface with the API to get and set data. It was mentioned that the interface should be simple yet effective, we could easily bombard the user with a lot of metadata from the cameras, however, the web interface will only show the required information and actions to ensure that a staff member can quickly and easily identify if there is an intruder currently on campus. All of the outlines objectives are achievable and can be implemented in a timely manner.
@@ -90,13 +95,13 @@ To meet the requirements set out for the Raspberry Pi and API, we will have to e
 
 In order to make our project as efficient as possible, the group decided that it will essential to use the British Computer Society’s (BCS) code of conduct, so it can guide us with professional standards and be aware of our responsibilities to each other and the public. 
 
-All of our decisions were made with the BCS code of conduct in mind. In order to keep our work professional, with competence and integrity, we made sure to thoroughly research and be up to date with the latest technology and techniques for our respective parts in this project. As it states in the BCS code of conduct “develop your professional knowledge, skills and competence on a continuing basis, maintaining awareness of technological developments, procedures, and standards that are relevant to your field.” (BCS, 2015).
+All of our decisions were made with the BCS code of conduct in mind. In order to keep our work professional, with competence and integrity, we made sure to thoroughly research and be up to date with the latest technology and techniques for our respective parts in this project. As it states in the BCS code of conduct “develop your professional knowledge, skills and competence on a continuing basis, maintaining awareness of technological developments, procedures, and standards that are relevant to your field.” [@bcs].
 
-Because of the nature of this project, working in a group, we ensured that everyone in the group had the same rights and authority toward the project. Everyone’s thoughts and opinions were taken into account , no matter the content, everyone had a voice and no one could contradict that, not only it is immoral it is enforced  by the (BCS) code of conduct “respect and value alternative viewpoints and, seek, accept and offer honest criticisms of work.” (BCS, 2015).
+Because of the nature of this project, working in a group, we ensured that everyone in the group had the same rights and authority toward the project. Everyone’s thoughts and opinions were taken into account , no matter the content, everyone had a voice and no one could contradict that, not only it is immoral it is enforced  by the (BCS) code of conduct “respect and value alternative viewpoints and, seek, accept and offer honest criticisms of work.” [@bcs].
 
-With that said this brings us to another matter, any form of discrimination was prohibited, not only it’s immoral, it is also illegal. The Equality Act 2010 and the BCS code of conduct state that any kind of discrimination is not allowed “conduct your professional activities without discrimination on the grounds of sex, sexual orientation, marital status, nationality, colour, race, ethnic origin, religion, age or disability, or of any other condition or requirement” (BCS, 2015).
+With that said this brings us to another matter, any form of discrimination was prohibited, not only it’s immoral, it is also illegal. The Equality Act 2010 and the BCS code of conduct state that any kind of discrimination is not allowed “conduct your professional activities without discrimination on the grounds of sex, sexual orientation, marital status, nationality, colour, race, ethnic origin, religion, age or disability, or of any other condition or requirement” [@bcs].
 
-It is important to say that we worked on this project for the public interest. We wanted to provide security and efficiency. With this product we want to saver time for the public and make there lives easier. Of course, the privacy of the public is our priority, we implemented restricted access to our product, so only personal that have a username and password can access the private dada. With the BCS code of conduct stating, “You shall have due regard for public health, privacy, security and wellbeing of others and the environment.” (BCS, 2015).
+It is important to say that we worked on this project for the public interest. We wanted to provide security and efficiency. With this product we want to saver time for the public and make there lives easier. Of course, the privacy of the public is our priority, we implemented restricted access to our product, so only personal that have a username and password can access the private data. With the BCS code of conduct stating, “You shall have due regard for public health, privacy, security and wellbeing of others and the environment.” [@bcs].
 
 
 # Requirements
@@ -181,10 +186,6 @@ It is important to say that we worked on this project for the public interest. W
 
 # Context Diagram
 
-![Context Diagram](ppm-images/Level_0_DFD.png)
+![Context Diagram](images/ppm-images/Level_0_DFD.png)
 
 # References
-
-[@agencies_2018]
-[@bcs]
-[@doran1981there]

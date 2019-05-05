@@ -110,6 +110,15 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -354,12 +363,13 @@ Magnus Frater (or Big Brother) has been created to help tackle the
 ongoing issue of security within large open campuses and premises, these
 sorts of locations inherently have an increased potential for intrusion
 through unmonitored sections of land. The group analysed the recent
-spree of attacks on schools and offices (for example the shooting that
-occurred at the YouTube headquarters in 2018) and found that in a large
-amount of these attacks there were open doors and spaces that allowed
-the attacker to enter with ease. As a consequence to this, the idea of
-creating a facial recognition system to analyse and report known and
-unknown people within a campus/large open setting was conceived.
+spree of attacks on schools and offices - for example the shooting that
+occurred at the YouTube headquarters in 2018 (Staff and Agencies 2018) -
+and found that in a large amount of these attacks there were open doors
+and spaces that allowed the attacker to enter with ease. As a
+consequence to this, the idea of creating a facial recognition system to
+analyse and report known and unknown people within a campus/large open
+setting was conceived.
 
 As mentioned, the main purpose of the project was to create a system
 that would accurately detect and report people walking around an area to
@@ -471,6 +481,8 @@ cause further legal or ethical issues.
     \protect\hyperlink{aims}{Aims}
   \item
     \protect\hyperlink{objectives}{Objectives}
+  \item
+    \protect\hyperlink{bcs-code-of-conduct}{BCS Code of Conduct}
   \end{itemize}
 \item
   \protect\hyperlink{requirements}{Requirements}
@@ -483,6 +495,10 @@ cause further legal or ethical issues.
     \protect\hyperlink{non-functional-requirements}{Non-Functional
     Requirements}
   \end{itemize}
+\item
+  \protect\hyperlink{normalisation}{Normalisation}
+\item
+  \protect\hyperlink{context-diagram}{Context Diagram}
 \item
   \protect\hyperlink{references}{References}
 \end{itemize}
@@ -504,28 +520,51 @@ prevent intrusions and attacks that occur on these types of locations.
 \subsection{Objectives}\label{objectives}}
 
 To ensure clear and appropriate objectives have been created for the
-project, the SMART (specific, measurable, achievable/appropriate,
-realistic, time-constrained) goals were used. SMART allows us to create
-objectives that provide the project with lots of functionality, that
-will be meaningful to the objects, and still stay within the projects
-deadlines. For the project to be successful the following objectives
-should be met:
+project, the S.M.A.R.T. (specific, measurable, achievable/appropriate,
+realistic, time-constrained) goals (Doran 1981) were used. SMART allows
+us to create objectives that provide the project with lots of
+functionality, that will be meaningful to the objects, and still stay
+within the projects deadlines. For the project to be successful the
+following objectives should be met:
 
-Staff Members should be able to: * Add new faces or people to the system
-through a simple yet effective web interface; * Monitor the movements of
-people across buildings and campuses, whether they are registered as
-people or not; * Manage alerts of unknown people entering the campus; *
-Provide temporary passes to unknown people to authorize them for a set
-amount of time;
+Staff Members should be able to:
+
+\begin{itemize}
+\tightlist
+\item
+  Add new faces or people to the system through a simple yet effective
+  web interface
+\item
+  Monitor the movements of people across buildings and campuses, whether
+  they are registered as people or not
+\item
+  Manage alerts of unknown people entering the campus
+\item
+  Provide temporary passes to unknown people to authorize them for a set
+  amount of time;
+\end{itemize}
 
 As a requirement to this, the camera and associated Raspberry Pi module
-should be able to provide the following: * A stream of video that can be
-analysed by the algorithm on the Pi in order to find faces; * A constant
-stream of face detections to the central server that manages all hits;
+should be able to provide the following:
 
-In general the following objective should be met: * The camera and web
-interface should be able to talk to each other through an API
-(Application Programming Interface)
+\begin{itemize}
+\tightlist
+\item
+  A stream of video that can be analysed by the algorithm on the Pi in
+  order to find faces;
+\item
+  A constant stream of face detections to the central server that
+  manages all hits;
+\end{itemize}
+
+In general the following objective should be met:
+
+\begin{itemize}
+\tightlist
+\item
+  The camera and web interface should be able to talk to each other
+  through an API (Application Programming Interface)
+\end{itemize}
 
 To meet the objectives set out for Staff Members, the group will be
 creating a web interface using NodeJS, this interface will have the
@@ -551,6 +590,50 @@ to another users facial data then this would be a breach of GDPR,
 therefore we will be implementing multiple security procedures to ensure
 that the API is secure, including the use of security based unit testing
 and manual testing.
+
+\hypertarget{bcs-code-of-conduct}{%
+\subsection{BCS Code of Conduct}\label{bcs-code-of-conduct}}
+
+In order to make our project as efficient as possible, the group decided
+that it will essential to use the British Computer Society's (BCS) code
+of conduct, so it can guide us with professional standards and be aware
+of our responsibilities to each other and the public.
+
+All of our decisions were made with the BCS code of conduct in mind. In
+order to keep our work professional, with competence and integrity, we
+made sure to thoroughly research and be up to date with the latest
+technology and techniques for our respective parts in this project. As
+it states in the BCS code of conduct \enquote{develop your professional
+knowledge, skills and competence on a continuing basis, maintaining
+awareness of technological developments, procedures, and standards that
+are relevant to your field.} (``BCS Code of Conduct'' 2015).
+
+Because of the nature of this project, working in a group, we ensured
+that everyone in the group had the same rights and authority toward the
+project. Everyone's thoughts and opinions were taken into account , no
+matter the content, everyone had a voice and no one could contradict
+that, not only it is immoral it is enforced by the (BCS) code of conduct
+\enquote{respect and value alternative viewpoints and, seek, accept and
+offer honest criticisms of work.} (``BCS Code of Conduct'' 2015).
+
+With that said this brings us to another matter, any form of
+discrimination was prohibited, not only it's immoral, it is also
+illegal. The Equality Act 2010 and the BCS code of conduct state that
+any kind of discrimination is not allowed \enquote{conduct your
+professional activities without discrimination on the grounds of sex,
+sexual orientation, marital status, nationality, colour, race, ethnic
+origin, religion, age or disability, or of any other condition or
+requirement} (``BCS Code of Conduct'' 2015).
+
+It is important to say that we worked on this project for the public
+interest. We wanted to provide security and efficiency. With this
+product we want to saver time for the public and make there lives
+easier. Of course, the privacy of the public is our priority, we
+implemented restricted access to our product, so only personal that have
+a username and password can access the private data. With the BCS code
+of conduct stating, \enquote{You shall have due regard for public
+health, privacy, security and wellbeing of others and the environment.}
+(``BCS Code of Conduct'' 2015).
 
 \hypertarget{requirements}{%
 \section{Requirements}\label{requirements}}
@@ -1041,9 +1124,78 @@ Administrators\strut
 \bottomrule
 \end{longtable}
 
-\hypertarget{references}{%
-\section{References}\label{references}}
+\newpage
 
-{[}{]} {[}@infotech\_2017{]} {[}@wayner\_2019{]}
+\hypertarget{normalisation}{%
+\section{Normalisation}\label{normalisation}}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+UNF & 1NF & 2NF \& 3NF\tabularnewline
+\midrule
+\endhead
+*Person ID & \textbf{Person} & \textbf{Person}\tabularnewline
+Person First Name & *Person ID & *Person ID\tabularnewline
+Person Last Name & First Name & First Name\tabularnewline
+Date of Birth & Last Name & Last Name\tabularnewline
+Gender & Date of Birth & Date of Birth\tabularnewline
+Camera ID & Gender & Gender\tabularnewline
+Camera Name & &\tabularnewline
+Camera Address & \textbf{Camera} & \textbf{Camera}\tabularnewline
+Camera Active Flag & *Camera ID & *Camera ID\tabularnewline
+Campus Name & Camera Name & \#\emph{Building ID}\tabularnewline
+Campus Address & Camera Address & Name\tabularnewline
+Campus City & Camera Active Flag & Address\tabularnewline
+Campus County & Campus Name & Active Flag\tabularnewline
+Campus Postcode & Campus Address &\tabularnewline
+Building Name & Campus City & \textbf{Campus}\tabularnewline
+Position Report ID & Campus County & *Campus ID\tabularnewline
+Position Report Camera & Campus Postcode & Name\tabularnewline
+Position Report Building & Building Name & Address\tabularnewline
+Position Report Campus & Position Report ID & City\tabularnewline
+Security Alert ID & Security Alert ID & County\tabularnewline
+Security Alert Camera & Security Alert Timestamp &
+Postcode\tabularnewline
+Security Alert Timestamp & Security Alert Actioned Flag &\tabularnewline
+Security Alert Actioned Flag & & \textbf{Building}\tabularnewline
+& & *Building ID\tabularnewline
+& & \#\emph{Campus ID}\tabularnewline
+& & Name\tabularnewline
+& &\tabularnewline
+& & \textbf{Security Alert}\tabularnewline
+& & *Security Alert ID\tabularnewline
+& & \#\emph{Camera ID}\tabularnewline
+& & Timestamp\tabularnewline
+& & Actioned Flag\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{context-diagram}{%
+\section{Context Diagram}\label{context-diagram}}
+
+\begin{figure}
+\centering
+\includegraphics{images/ppm-images/Level_0_DFD.png}
+\caption{Context Diagram}
+\end{figure}
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-bcs}{}%
+``BCS Code of Conduct.'' 2015. \emph{BCS}.
+\url{https://www.bcs.org/membership/become-a-member/bcs-code-of-conduct/}.
+
+\leavevmode\hypertarget{ref-doran1981there}{}%
+Doran, George T. 1981. ``There'sa Smart Way to Write Management's Goals
+and Objectives.'' \emph{Management Review} 70 (11): 35--36.
+
+\leavevmode\hypertarget{ref-agencies_2018}{}%
+Staff, The Guardian, and Agencies. 2018. ``YouTube Hq Shooting: Police
+Identify Woman Who Opened Fire.'' \emph{The Guardian}. Guardian News;
+Media.
+\url{https://www.theguardian.com/technology/2018/apr/04/youtube-shooting-police-identify-woman-opened-fire-hq}.
 
 \end{document}
