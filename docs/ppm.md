@@ -140,30 +140,29 @@ To meet the requirements set out for the Raspberry Pi and API, we will have to e
 | Camera Name                  |                                |                    |
 | Camera Address               | **Camera**                     | **Camera**         |
 | Camera Active Flag           | \*Camera ID                    | \*Camera ID        |
-| Campus Name                  |                                | #*Building ID*     |
-| Campus Address               |  Camera Name                   | Name               |
-|                              |  Camera Address                | Address            |
-| Campus City                  |  Camera Active Flag            | Active Flag        |
-| Campus County                |  Campus Name                   |                    |
-| Campus Postcode              |  Campus Address                | **Campus**         |
-| Building Name                |  Campus City                   | Campus ID          |
-| Position Report ID           |  Campus County                 | Name               |
-| Position Report Camera       |  Campus Postcode               | Address            |
-| Position Report Building     |  Building Name                 | City               |
-| Position Report Campus       |  Position Report ID            | County             |
-| Security Alert ID            |  Security Alert ID             | Postcode           |
-| Security Alert Camera        |  Security Alert Timestamp      |                    |
-| Security Alert Timestamp     |  Security Alert Actioned Flag  | **Building**       |
-| Security Alert Actioned Flag |                                | Building ID        |
+| Campus Name                  |  Camera Name                   | #*Building ID*     |
+| Campus Address               |  Camera Address                | Name               |
+| Campus City                  |  Camera Active Flag            | Address            |
+| Campus County                |  Campus Name                   | Active Flag        |
+| Campus Postcode              |  Campus Address                |                    |
+| Building Name                |  Campus City                   | **Campus**         |
+| Position Report ID           |  Campus County                 | \*Campus ID        |
+| Position Report Camera       |  Campus Postcode               | Name               |
+| Position Report Building     |  Building Name                 | Address            |
+| Position Report Campus       |  Position Report ID            | City               |
+| Security Alert ID            |  Security Alert ID             | County             |
+| Security Alert Camera        |  Security Alert Timestamp      | Postcode           |
+| Security Alert Timestamp     |  Security Alert Actioned Flag  |                    |
+| Security Alert Actioned Flag |                                | **Building**       |
+|                              |                                | \*Building ID      |
 |                              |                                | #*Campus ID*       |
 |                              |                                | Name               |
 |                              |                                |                    |
 |                              |                                | **Security Alert** |
-|                              |                                | Security Alert ID  |
+|                              |                                | \*Security Alert ID|
 |                              |                                | #*Camera ID*       |
 |                              |                                | Timestamp          |
 |                              |                                | Actioned Flag      |
-|                              |                                |                    |
 
 # References
 
