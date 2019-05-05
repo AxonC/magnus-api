@@ -52,6 +52,8 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 - [Introduction](#introduction)
 	- [Project Aims](#project-aims)
 	- [Objectives](#objectives)
+- [Existing Solutions](#existing-solutions)
+	- [Product Demand](#product-demand)
 - [Project Management](#project-management)
 	- [Meetings](#meetings)
 		- [General Absence](#general-absence)
@@ -67,7 +69,12 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 	- [Non-Functional Requirements](#non-functional-requirements)
 - [Normalisation](#normalisation)
 - [Context Diagram](#context-diagram)
+- [Logical ERD](#logical-erd)
+- [Process flow for Camera](#process-flow-for-camera)
 	- [BCS Code of Conduct](#bcs-code-of-conduct)
+- [Discussion / Conclusion](#discussion--conclusion)
+	- [Social & Ethical Issues](#social--ethical-issues)
+	- [Future Work](#future-work)
 - [Appendix](#appendix)
 	- [Use Cases](#use-cases)
 	- [Screen Designs](#screen-designs)
@@ -76,7 +83,7 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 		- [Statistics](#statistics)
 		- [Admin](#admin)
 		- [User Profile](#user-profile)
-		- [Elements Appendix:](#elements-appendix)
+		- [Elements Appendix](#elements-appendix)
 - [References](#references)
 
 \newpage
@@ -125,6 +132,12 @@ To meet the objectives set out for Staff Members, the group will be creating a w
 To meet the requirements set out for the Raspberry Pi and API, we will have to ensure substantial testing of the facial detection algorithm takes place, the group wants to avoid experiencing a scenario in which multiple people are not identified. However, the algorithm cannot be 100% effective, there will always be scenarios in which the algorithm misses a person, or mis-identifies them, it would be unrealistic and a waste of development time to be chasing after a 100% success rate. We will also have to ensure that the API is tested thoroughly, not only for functionality, but for security purposes, if an attacker gained access to another users facial data then this would be a breach of GDPR, therefore we will be implementing multiple security procedures to ensure that the API is secure, including the use of security based unit testing and manual testing.
 
 \newpage
+
+# Existing Solutions
+
+## Product Demand
+
+While there is no direct demand for this product, this could just be down to the fact that organisations and 
 
 # Project Management
 
@@ -390,6 +403,18 @@ deadline.
 
 \newpage
 
+# Logical ERD
+
+![Logical ERD](images/ppm-images/logical-erd.png)
+
+\newpage
+
+# Process flow for Camera
+
+![](images/ppm-images/camera-flow.png){width=70%}
+
+\newpage
+
 ## BCS Code of Conduct
 
 In order to make our project as efficient as possible, the group decided that it will essential to use the British Computer Society’s (BCS) code of conduct, so it can guide us with professional standards and be aware of our responsibilities to each other and the public. 
@@ -401,6 +426,30 @@ Because of the nature of this project, working in a group, we ensured that every
 With that said this brings us to another matter, any form of discrimination was prohibited, not only it’s immoral, it is also illegal. The Equality Act 2010 and the BCS code of conduct state that any kind of discrimination is not allowed “conduct your professional activities without discrimination on the grounds of sex, sexual orientation, marital status, nationality, colour, race, ethnic origin, religion, age or disability, or of any other condition or requirement” [@bcs].
 
 It is important to say that we worked on this project for the public interest. We wanted to provide security and efficiency. With this product we want to saver time for the public and make there lives easier. Of course, the privacy of the public is our priority, we implemented restricted access to our product, so only personal that have a username and password can access the private data. With the BCS code of conduct stating, “You shall have due regard for public health, privacy, security and wellbeing of others and the environment.” [@bcs].
+
+\newpage
+
+# Discussion / Conclusion 
+
+As a result of this project, the group has created a basic facial recognition system which records the location of a ‘hit’ (where the camera has successfully recognised a person based upon a pre-defined database of pictures). The cameras are designed to run on a lightweight device (demonstrated as a proof-of-concept on a Raspberry Pi) to allow the system to be cost-effective and for cameras to be in potentially secretive locations (depending on the use case). To monitor the data, a dashboard presenting all this information to relevant security personnel has also been created. From here, users of the dashboard can administer those people whom are known to the system, monitor activity in a specific location and action alerts of unknown reports in the places. 
+
+The big challenge and learning experience with this project were producing a system which wasn’t just an academic exercise. Producing a system which had the potential to be used to improve the safety and security of our peers and the staff on campus was a rewarding concept when the group first agreed on the proposal. It required for a large pool of skills to be brought together and managed in a way which provided the best results based upon our aims and requirements. With other modules at university often taking varying degrees of priority through the course of the project, it was important to set reasonable goals and help people manage their workloads. Much of the group were in the same group so could empathise with the conflict between this project and other assignments at university. We prepared for this well using the risk assessment responses and producing a clear list of tasks using a GANTT chart and other methods such as a shared to-do list between our intra-project ‘teams’. Planning a lot of the tasks out in advance allowed members to manage their workloads effectively.  
+
+Facial recognition technology, coupled with artificial intelligence and machine learning, are very much emerging technologies which are at the cutting edge of research. For a group of undergraduate students, despite the collective experience of the group the system we have produced in just 5 months only scratches the surface as to what this concept can do. Learning skills in this field could be useful for future employment as companies may seek to utilise these technologies at a greater rate. 
+
+## Social & Ethical Issues 
+
+This technology could be perceived as being highly invasive on people and their civil liberties. By storing the location of people, including exact timestamps, not to mention their photograph to cross-reference, causes some ethical issues.  
+
+Data on the whereabouts of people in the wrong hands could lead to the safety of people and their homes (e.g. a burglary) could be compromised. If this project was to enter the real world on the scale to make it useful, there would have to be significant consideration and training given to the personnel whom use the system to ensure that this scenario doesn’t occur. People also might not feel comfortable making such a binary decision as whether they are perceived as a ‘threat’ due to them not being known to the system. Therefore, the project still carries a human element with respect to flagging potentially harmful situations, to ensure the computer is not making all of the decisions but supporting that of the human by providing more in-depth information on a given scenario. 
+
+## Future Work 
+
+As previously mentioned, this could be considered to be a basic implementation of both the facial recognition algorithms and the way the data about identification is recorded. Optimisations for the future could include improving the speed, reliability and scalability of the algorithm and camera feeds. These variables are still unknown given the limited scale of this project but has been developed in such a way which would make these things feasible. 
+
+In terms of work not complete, the group would like to have integrated this system with the ability to capture attendance for academic sessions within the university. This was defined as one of our stretch goals at the start of the project but due to limited time and technical limitations, this was not attainable in the given timeframe. 
+
+In the future, the system could also be integrated with the local police facial recognition database in order to identify unknown people automatically, not only would this allow security personnel to understand who is on campus without having to manually intervene (providing the person exists in the Police database), but it would also allow for security personnel to immediately identify criminals or unwanted people that are on campus. 
 
 \newpage
 
@@ -438,33 +487,34 @@ It is important to say that we worked on this project for the public interest. W
 
 The login page will be the first page that the user will interact with. This will require a username / email and password to be entered in order to access the website. This will also contain a ‘Forgotten Password’ button to give extra assistance to the user. 
 
-
+\newpage
 ### Dashboard
 
 ![Dashboard](images/ppm-images/dashboard-design.png)
 
 The dashboard will be the first screen that the user views after logging in. This page will display general details about the system and how it is preforming, giving specific updates on new users, detections, unknown detections, etc. This will also show specific data on camera activity, showing which cameras have detected what user type, or if it has detected and invalid user.   
 
-
+\newpage
 ### Statistics
 
 ![Statistics](images/ppm-images/statistics-design.png)
 
 The statistics page will show the user all of the relative data regarding user activity. This page includes a graph which will show specified user activity between campus locations. The specified user will be changeable by a set of buttons at the top of the screen. The statistics page will also display campus activity in specific buildings.  
-
+\newpage
 ### Admin
 
 ![Admin](images/ppm-images/admin-design.png)
 
 The admin page will allow the user the create and edit data. This data may be regarding a permanent user, temporary user, or a camera. This page will be used in order to view users’ profiles, add users, edit current user’s data, find specific locational data and also find specific camera data.  
-
+\newpage
 ### User Profile
 
 ![User Profile](images/ppm-images/profile-design.png)
 
 The profile page will show the user the chosen user’s profile information. This will contain basic information about the user, including name, course, year, attendance, location, and activity. The default user for this page will be the profile that is associated with the current log-in. Other user’s will be able to be accessed by the admin page through selecting a user and then the profile button.  
+\newpage
 
-### Elements Appendix: 
+### Elements Appendix
 
 Login: 
 
@@ -531,9 +581,7 @@ Profile:
 10. Favoured Location
 11. Detections Table
 12. Total Activity Breakdown
-
- 
-
+\newpage
 
 
 # References
