@@ -295,7 +295,25 @@ for it. |
 
 # Context Diagram
 
-![Context Diagram](images/ppm-images/Level_0_DFD.png)
+![Context Diagram](images/ppm-images/context-diagram.png)
+
+\newpage
+
+\begin{landscape}
+
+\pagestyle{empty}
+
+\hypertarget{level0dfd}{%
+\section{Level 0 DFD}\label{level0dfd}}
+
+\begin{figure}
+    \makebox[\linewidth]{
+		\includegraphics[width=0.95\linewidth]{images/ppm-images/level-0-dfd.png}
+    }
+	\caption{Level 0 DFD} \label{fig:level0dfd}
+\end{figure}
+
+\end{landscape}
 
 \newpage
 
