@@ -479,6 +479,9 @@ cause further legal or ethical issues.
   \tightlist
   \item
     \protect\hyperlink{functional-requirements}{Functional Requirements}
+  \item
+    \protect\hyperlink{non-functional-requirements}{Non-Functional
+    Requirements}
   \end{itemize}
 \item
   \protect\hyperlink{references}{References}
@@ -689,6 +692,50 @@ important feature would be missing\strut
 \begin{minipage}[t]{0.03\columnwidth}\raggedright
 8\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+List Campuses\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Display a list of Campuses\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+In order to display required information to users of the system, there
+must be functionality to display added campuses\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+4 - The application will still function without this, however a very
+important feature would be missing\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+9\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Add Campuses\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Add a Campus\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+In order to manage buildings, campuses must be added so that buildings
+can then be associated with them\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+5 - This functionality is required for the system to work properly\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Remove Campuses\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Remove a campus\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+A campus may no longer be required or may be phased out, therefore the
+ability to remove campuses must be included\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+4 - The application will still function without this, however a very
+important feature would be missing\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+11\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
 List Buildings\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
 Display a list of buildings\strut
@@ -702,7 +749,7 @@ must be functionality to display added buildings\strut
 important feature would be missing\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.03\columnwidth}\raggedright
-9\strut
+12\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
 Add Buildings\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
@@ -713,11 +760,25 @@ Web Interface\strut
 In order to manage cameras, buildings must be added so that cameras can
 then be associated with them\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+5 - This functionality is required for the system to work properly\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+13\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Remove Buildings\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Remove a building\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+A building may no longer be required or may be phased out, therefore the
+ability to remove buildings must be included\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
 4 - The application will still function without this, however a very
 important feature would be missing\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.03\columnwidth}\raggedright
-10\strut
+14\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
 Add Cameras\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
@@ -730,6 +791,252 @@ enrolled onto the system, this occurs within the Python applications
 code\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
 5 - This functionality is required for the system to work properly\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+15\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+List Cameras\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Display a list of Cameras\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+In order to display required information to users of the system, there
+must be functionality to display added cameras\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+4 - The application will still function without this, however a very
+important feature would be missing\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+16\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Update Cameras\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Update a camera\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+A camera may have its location or information changed therefore, there
+must be functionality to update added cameras\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+4 - The application will still function without this, however a very
+important feature would be missing\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+17\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Remove Cameras\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Remove a camera\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+A camera may no longer be required or may have been phased out
+therefore, there must be functionality to delete added cameras\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+4 - The application will still function without this, however a very
+important feature would be missing\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+18\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+List Users\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+List Users\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+Administrators need to be able to list users to see who is
+administrating their system and what people have been registered\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+4 - The application will still function without this, however a very
+important feature would be missing\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+19\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+View Users\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+View Users\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+Administrators should be able to view user profiles which should include
+statistics in regards to current and previous locations\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+3 - If possible, the system should have this implemented as it would be
+an excellent feature to have, however it is not critical to the
+functioning of the system\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Add Users\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Add Users\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+Administrators need to be able to add users to the system, this could be
+for administrative purposes or just adding a low level user\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+4 - The application will still function without this, however a very
+important feature would be missing\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+21\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Remove Users\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Remove Users\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+Administrators need to be able to list users to see who is
+administrating their system and what people have been registered\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+4 - The application will still function without this, however a very
+important feature would be missing\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+22\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+List Statistics\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+List Statistics\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+Administrators should be able to look at statistics of their systems for
+example, what location is most popular, etc\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+2 - The application does not need or require this functionality, it is
+purely a quality of life improvement, however it would be a great
+advantage for administrators of the system\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+React to Alerts\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+React to Alerts\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+Administrators and security personnel must be able to react (false
+negative, resolved) to alerts of unknown users on Campus in order to
+remove an unknown user listing\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+5 - The core objective of this system is that organisations can react to
+unknown people activity, therefore this functionality needs to be
+included\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{non-functional-requirements}{%
+\subsection{Non-Functional
+Requirements}\label{non-functional-requirements}}
+
+\begin{longtable}[]{@{}llllll@{}}
+\toprule
+\begin{minipage}[b]{0.03\columnwidth}\raggedright
+NFR\#\strut
+\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright
+Function\strut
+\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright
+Goal\strut
+\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedright
+Actor\strut
+\end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\raggedright
+Importance Rating (out of 5)\strut
+\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Be usable\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+The system should be usable by any users with varying levels of computer
+proficiencies\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Administrators\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Performance\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+The system should be fast and responsive when administrators are using
+the Web Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Administrators\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Be easy to setup\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Cameras should be easy to setup and link into the web interface\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+System Installer\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Automated Backup\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+The system should have an automated backup for the facial data to
+prevent loss of authorised users\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Administrators\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Language\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+The system should have a variety of languages available in order to
+cater for non english speakers\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Administrators\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.03\columnwidth}\raggedright
+6\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Security\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+The system should be inherently secure and all data should be held in a
+secure facility/location\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Administrators\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
