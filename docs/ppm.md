@@ -117,7 +117,7 @@ To meet the requirements set out for the Raspberry Pi and API, we will have to e
 ## Non-Functional Requirements
 
 | NFR# | Function      | Goal  | Actor | Importance Rating (out of 5) |
-| --- | --------------- | --------------- | --------- | ----------------- | ------------------ |
+| --- | ------------- | ------------------- | -------------- | ----------------- | --- |
 | 1   | Be usable | The system should be usable by any users with varying levels of computer proficiencies | Administrators |5|
 | 2   | Performance  | The system should be fast and responsive when administrators are using the Web Interface| Administrators |4|
 | 3   | Be easy to setup | Cameras should be easy to setup and link into the web interface| System Installer |3|
