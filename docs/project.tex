@@ -556,6 +556,16 @@ cause further legal or ethical issues.
   \begin{itemize}
   \tightlist
   \item
+    \protect\hyperlink{algorithm-explanation}{Algorithm Explanation}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \protect\hyperlink{facial-detection}{Facial Detection}
+    \item
+      \protect\hyperlink{facial-recognition}{Facial Recognition}
+    \end{itemize}
+  \item
     \protect\hyperlink{bcs-code-of-conduct}{BCS Code of Conduct}
   \end{itemize}
 \item
@@ -577,6 +587,8 @@ cause further legal or ethical issues.
   \item
     \protect\hyperlink{use-cases}{Use Cases}
   \item
+    \protect\hyperlink{test-plan}{Test Plan}
+  \item
     \protect\hyperlink{screen-designs}{Screen Designs}
 
     \begin{itemize}
@@ -594,6 +606,8 @@ cause further legal or ethical issues.
     \item
       \protect\hyperlink{elements-appendix}{Elements Appendix}
     \end{itemize}
+  \item
+    \protect\hyperlink{test-plan-1}{Test Plan}
   \item
     \protect\hyperlink{ui-screenshots}{UI Screenshots}
 
@@ -856,6 +870,8 @@ being targeted specifically.
 You can see the full results in the
 \protect\hyperlink{questionnaire-responses}{Questionnaire Responses}
 section of the document.
+
+\newpage
 
 \hypertarget{project-management}{%
 \section{Project Management}\label{project-management}}
@@ -2073,6 +2089,761 @@ unwanted people that are on campus.
 
 \includegraphics{images/ppm-images/use-case-7.png} \newpage
 
+\hypertarget{test-plan}{%
+\subsection{Test Plan}\label{test-plan}}
+
+We have performed extensive testing on our application, whenever a new
+feature is pushed to GitHub all related group members perform testing
+before it is pushed to the master branch and released. We also have far
+reaching Unit Tests that ensure the APIs features are working correctly
+and that suitable data is being returned.
+
+Below you can find testing results in relation to our Web Application
+
+\begin{longtable}[]{@{}cllllll@{}}
+\toprule
+\begin{minipage}[b]{0.04\columnwidth}\centering
+Test No\strut
+\end{minipage} & \begin{minipage}[b]{0.27\columnwidth}\raggedright
+Requirement\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright
+Type of Test\strut
+\end{minipage} & \begin{minipage}[b]{0.32\columnwidth}\raggedright
+Expected Result\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright
+Actual Result\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
+Workaround\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
+Retest\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.04\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+Inputting correct login credentials logs into the website.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Valid\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+The website will load into the dashboard page.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+Inputting incorrect login credentials denies access to the
+website.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+The user will receive a message informing them to correctly log
+in.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+Checking the remember me box will allow the site to remember the
+user.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Checking the remember me box will allow the site to remember the
+user.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The dashboard button redirects the user to the dashboard page.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On activation of the dashboard button, the user will be taken to the
+dashboard.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The dashboard loads and displays all required data correctly.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On load the dashboard populates all fields on the page from given
+resources.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+6\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The dashboard displays relevant and current data of detection
+data.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+The camera detections table is populated with relevant detection
+data.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+7\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The dashboard displays information on campus locations and
+buildings.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+The campus capacities table will be populated with relevant locational
+data.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+8\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The statistics button will redirect the user to the statistics
+page.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On activation of the statistics button, the user will be taken to the
+statistics page.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+9\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The statistics page will display relevant activity data.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On load the statistics page will be populated with general data of the
+system.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The statistics page can show specifically student data.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On button press of the student button, the activity graph will change to
+specifically show student data.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+11\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The statistics page can show specifically staff data.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On button press of the staff button, the activity graph will change to
+specifically show staff data.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+12\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The statistics page can show specifically guest data.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On button press of the guest button, the activity graph will change to
+specifically show guest data.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+13\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The statistics page can show general data of the system.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On button press of the general button, the activity graph will change to
+show all user data.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+14\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The statistics page graph presents current and relevant data.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On draw the graph will display date by date information for each
+location for each user type.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+15\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The statistics graph can be used to view past data.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On load the graph presents the past 30 days of data, though after
+pressing the 30, 60 or 90-day button the corresponding data will be
+displayed.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+16\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The statistics page shows current locational data.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On load the current campus activity table will be filled with current
+locational activity, showing the spread of people across the
+campus.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+17\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The Administration button will redirect the user to the admin
+page.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On activation, the button will take the user to their administration
+page, suited to their access level.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+18\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page displays all current system users.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On load the admin page will default to the user's tab which will display
+all of the current users.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+19\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page allows the user to find another users profile.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+If the user has correct privileges, using the view profile button will
+take the user to the selected user's profile.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page allows the user to edit another users profile.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+If the user has correct privileges, using the edit button will allow the
+user to edit the selected user's information.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+21\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page allows the user to delete another user.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+If the user has correct privileges, using the delete button will delete
+the selected user's account.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+22\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page will show data relevant to buildings and locations.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On selecting the campuses and buildings tab the page will show connected
+buildings and campuses. This will also display their respective
+status.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page allows the user to view data on locations and
+buildings.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+If the user has correct privileges, on selected the view info button the
+user will be taken to a page containing data on the selected
+location.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+24\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page allows the user to edit locations and buildings
+data.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+If the user has correct privileges, on selecting the edit data button
+the user will be able to edit the selected locations data.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+25\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page will allow the user to delete locations and
+buildings.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+If the user has correct privileges, on selecting the delete button, the
+selected location will be deleted form the system.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+26\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page will show the camera and connection status of each
+location.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+The campuses and buildings tab will automatically show the current
+status of the registered locations.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page will allow the user to browse data of registered
+locations.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On selection of a location it will display all \enquote{sublocations}
+associated with the location.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page will allow the user to view all registered cameras
+.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On selection of the cameras tab, the page will then show a table of all
+of the registered cameras.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+29\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page will show all relevant data regarding cameras.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On selection of the cameras tab, the cameras table displays relevant
+technical information about each camera as well as its status.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+30\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page will allow the user to inspect cameras.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+If the user has correct privileges, on selection of the view camera
+button, the user will be able to view relevant data of the camera they
+selected.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+31\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page will allow the user to edit camera data.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+If the user has correct privileges, on selection of the edit button the
+user will be able to edit the selected cameras data.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+32\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The admin page will allow the user to remove cameras.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+If the user has correct privileges, on selection of the delete button,
+the camera that has been selected will be removed from the system.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+33\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The alerts button will navigate the user to the alerts page.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On activation of the alerts button the user will be taken to the alerts
+page of their permissions.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+34\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The alerts page will show information about alert events.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On load the alerts page will display all of the recent unacknowledged
+alerts of the system and relevant information.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+35\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The alerts page generates relevant and important alerts.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+The alerts page will be updated whenever there is an unknown person
+detected by the cameras and remain until acknowledged.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+36\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The alerts page allows the user to acknowledge the alerts.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+The user will be able to acknowledge each of the alerts through either
+pressing the false negative button or the resolved button.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+37\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The Profile button will take the user to their personal profile.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Upon activation of the button, the user will be taken to their personal
+profile page with their own data.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+38\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The profile page will display safe and relevant personal data of the
+user.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On load the profile page will display the users name, course or
+profession, and year.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+39\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The profile page will display the users positioning.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On load, the profile will display the users current and most favoured
+position, in the case that the user's current position is false.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+40\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The profile page will display the users past positioning.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On load, the page will load the most recent data regarding the users
+previous positioning. This will be displayed in the detections
+table.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+41\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The profile page will indicate a user's activity.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Within the detections table an academic column indicates if an action
+was academic related or not.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+42\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The profile page will show a user's habits.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+On load the user's favoured location will be shown, as well as an
+activity table which shows a breakdown of the user's total recorded
+action locations.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+43\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The logout button will have the desired effect when used.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Upon activating the logout button, the logout protocol will begin.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\centering
+44\strut
+\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
+The user will be able to safely log out of the system.\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Upon use of the logout button the user's session will be ended and will
+need to re-login.\strut
+\end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright
+As expected\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+N/A\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
 \hypertarget{screen-designs}{%
 \subsection{Screen Designs}\label{screen-designs}}
 
@@ -2297,6 +3068,9 @@ Profile:
 \item
   Total Activity Breakdown \newpage
 \end{enumerate}
+
+\hypertarget{test-plan-1}{%
+\subsection{Test Plan}\label{test-plan-1}}
 
 \hypertarget{ui-screenshots}{%
 \subsection{UI Screenshots}\label{ui-screenshots}}
