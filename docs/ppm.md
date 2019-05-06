@@ -477,11 +477,21 @@ The big challenge and learning experience with this project were producing a sys
 
 Facial recognition technology, coupled with artificial intelligence and machine learning, are very much emerging technologies which are at the cutting edge of research. For a group of undergraduate students, despite the collective experience of the group the system we have produced in just 5 months only scratches the surface as to what this concept can do. Learning skills in this field could be useful for future employment as companies may seek to utilise these technologies at a greater rate. 
 
-## Social & Ethical Issues 
+## Social, Legal & Ethical Issues 
 
 This technology could be perceived as being highly invasive on people and their civil liberties. By storing the location of people, including exact timestamps, not to mention their photograph to cross-reference, causes some ethical issues.  
 
 Data on the whereabouts of people in the wrong hands could lead to the safety of people and their homes (e.g. a burglary) could be compromised. If this project was to enter the real world on the scale to make it useful, there would have to be significant consideration and training given to the personnel whom use the system to ensure that this scenario doesn’t occur. People also might not feel comfortable making such a binary decision as whether they are perceived as a ‘threat’ due to them not being known to the system. Therefore, the project still carries a human element with respect to flagging potentially harmful situations, to ensure the computer is not making all of the decisions but supporting that of the human by providing more in-depth information on a given scenario. 
+
+Technologies for facial recognition (FRS) require machine-learning algorithms that have been trained with data to recognise facial features’. Many factors play into account that affect the match like the quality of the database image (pixel, size, lighting, etc.), the quality of the captured image, the algorithmic performance and more. The important aspect of the use of this technology is the operator and their response. The software itself does nothing but output its matches, it is the operator that will decide what to do with the information. The concern here is that if the software results in an inaccurate output and generates many matches the operator might act without verifying the accuracy of the match. Therefore, ethical principles must be in place. [@porter_uncategorized]
+
+UK Government guidelines relating to the use of facial recognition software [@porter-uncategorized] state that ethical issues include, but are not limited to:
+- The use of the software can be used only if it benefits and serves the public interest.
+- The use of the software can be used only if it is a reliable tool to identify people.
+- If the software has unequal and discriminatory results should be open to careful examination and effective oversight.
+- Images and information should have appropriate security measures to prevent unauthorised access and use.
+
+The group believes these principles should be followed with future developments of the system by improving the reliability of the recognition algorithm. Keeping those people on areas such as a campus serves in the public interest but some work might still be required to optimise its uses in other use cases and locations. The images are transferred between areas of the system using secure methods of communication HTTPS to ensure that the data doesn't get intercepted.
 
 ## Future Work 
 
