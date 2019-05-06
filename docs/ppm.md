@@ -446,6 +446,7 @@ deadline.
 # Logical ERD
 
 ![Logical ERD](images/ppm-images/logical-erd.png)
+The ERD represents the database structure with the data in the third normalised form. It shows the relationship between the entitites within the application, in addition to the keys and cardinalities. 
 
 \newpage
 
@@ -462,7 +463,7 @@ For the facial detection portion of the program the haar cascading classifiers i
 ![Camera Pixel Comparison 1](images/ppm-images/camera-algorithm1.png)
 ![Camera Pixel Comparison 2](images/ppm-images/camera-algorithm2.png)
 
-Each filter will be placed at every available size of the image some will be useful other won't be, but this is where the problems start, doing this for a 24x24 pixel image will use over 160000 features. This is very time consuming which is where the power of haar comes in. It applies the filters in a cascading fashion. Applying one set and if all of the comeback positive, the next set will be used this is very beneficial as it help weed out areas that aren't faces quicker. An image that passes all states of the cascade will be returned with the information of the region the contains the space.
+Each filter will be placed at every available size of the image some will be useful other won't be, but this is where the problems start, doing this for a 24x24 pixel image will use over 160000 features. This is very time consuming which is where the power of haar comes in. It applies the filters in a cascading fashion. Applying one set and if all of the comeback positive, the next set will be used this is very beneficial as it help weed out areas that aren't faces quicker. An image that passes all states of the cascade will be returned with the information of the region the contains the space. [@opencv]
 
 ### Facial Recognition
 
@@ -470,7 +471,7 @@ For the facial recognition the Local Binary Pattern Histograms (LBPH) was used. 
 ![Local Binary Pattern Histogram 1](images/ppm-images/camera-algorithm3.png)
 ![Local Binary Pattern Histogram 1](images/ppm-images/camera-algorithm4.png)
 
-This new image better represents the features of the original image, as it stores a histogram for how many occurrences there are of each brightness value. This is then compared with a trained model and the closest neighbor is found. A match will always be given back this is why a threshold need to be implemented as a value too far away from the original is unlikely to be a positive match.
+This new image better represents the features of the original image, as it stores a histogram for how many occurrences there are of each brightness value. This is then compared with a trained model and the closest neighbor is found. A match will always be given back this is why a threshold need to be implemented as a value too far away from the original is unlikely to be a positive match. [@salton_prado_salton_prado_2017]
 
 \newpage
 
