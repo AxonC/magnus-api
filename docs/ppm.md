@@ -71,11 +71,12 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 	- [Non-Functional Requirements](#non-functional-requirements)
 - [Normalisation](#normalisation)
 - [Context Diagram](#context-diagram)
+- [GANTT Chart](#gantt-chart)
 - [Logical ERD](#logical-erd)
 - [Process flow for Camera](#process-flow-for-camera)
 	- [BCS Code of Conduct](#bcs-code-of-conduct)
 - [Discussion / Conclusion](#discussion--conclusion)
-	- [Social & Ethical Issues](#social--ethical-issues)
+	- [Social, Legal & Ethical Issues](#social-legal--ethical-issues)
 	- [Future Work](#future-work)
 - [Appendix](#appendix)
 	- [Use Cases](#use-cases)
@@ -443,6 +444,32 @@ deadline.
 
 \newpage
 
+# GANTT Chart
+
+**Please note, this is a preview not the full GANTT Chart, please see PPMGanttChart.xlsx for the full GANTT Chart**
+
+![Preview of GANTT Chart](images/ppm-images/gantt-chart-preview.png)
+
+\newpage
+
+\begin{landscape}
+
+\pagestyle{empty}
+
+\hypertarget{pert-chart}{%
+\section{PERT Chart}\label{pert-chart}}
+
+\begin{figure}
+    \makebox[\linewidth]{
+		\includegraphics[width=1\linewidth]{images/ppm-images/pert-chart.png}
+    }
+	\caption{PERT Chart} \label{fig:pert-chart}
+\end{figure}
+
+\end{landscape}
+
+\newpage
+
 # Logical ERD
 
 ![Logical ERD](images/ppm-images/logical-erd.png)
@@ -485,7 +512,7 @@ Data on the whereabouts of people in the wrong hands could lead to the safety of
 
 Technologies for facial recognition (FRS) require machine-learning algorithms that have been trained with data to recognise facial features’. Many factors play into account that affect the match like the quality of the database image (pixel, size, lighting, etc.), the quality of the captured image, the algorithmic performance and more. The important aspect of the use of this technology is the operator and their response. The software itself does nothing but output its matches, it is the operator that will decide what to do with the information. The concern here is that if the software results in an inaccurate output and generates many matches the operator might act without verifying the accuracy of the match. Therefore, ethical principles must be in place. [@porter_uncategorized]
 
-UK Government guidelines relating to the use of facial recognition software [@porter-uncategorized] state that ethical issues include, but are not limited to:
+UK Government guidelines relating to the use of facial recognition software [@porter_uncategorized] state that ethical issues include, but are not limited to:
 - The use of the software can be used only if it benefits and serves the public interest.
 - The use of the software can be used only if it is a reliable tool to identify people.
 - If the software has unequal and discriminatory results should be open to careful examination and effective oversight.
@@ -538,6 +565,7 @@ In the future, the system could also be integrated with the local police facial 
 The login page will be the first page that the user will interact with. This will require a username / email and password to be entered in order to access the website. This will also contain a ‘Forgotten Password’ button to give extra assistance to the user. 
 
 \newpage
+
 ### Dashboard
 
 ![Dashboard](images/ppm-images/dashboard-design.png)
@@ -545,18 +573,21 @@ The login page will be the first page that the user will interact with. This wil
 The dashboard will be the first screen that the user views after logging in. This page will display general details about the system and how it is preforming, giving specific updates on new users, detections, unknown detections, etc. This will also show specific data on camera activity, showing which cameras have detected what user type, or if it has detected and invalid user.   
 
 \newpage
+
 ### Statistics
 
 ![Statistics](images/ppm-images/statistics-design.png)
 
 The statistics page will show the user all of the relative data regarding user activity. This page includes a graph which will show specified user activity between campus locations. The specified user will be changeable by a set of buttons at the top of the screen. The statistics page will also display campus activity in specific buildings.  
 \newpage
+
 ### Admin
 
 ![Admin](images/ppm-images/admin-design.png)
 
 The admin page will allow the user the create and edit data. This data may be regarding a permanent user, temporary user, or a camera. This page will be used in order to view users’ profiles, add users, edit current user’s data, find specific locational data and also find specific camera data.  
 \newpage
+
 ### User Profile
 
 ![User Profile](images/ppm-images/profile-design.png)
