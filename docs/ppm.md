@@ -47,8 +47,6 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 \newpage
 
 # Table of Contents
-- [Abstract](#abstract)
-- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 	- [Project Aims](#project-aims)
 	- [Objectives](#objectives)
@@ -71,16 +69,20 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 	- [Non-Functional Requirements](#non-functional-requirements)
 - [Normalisation](#normalisation)
 - [Context Diagram](#context-diagram)
+- [Level 0 DFD](#level0dfd)
+- [Concept Map](#cmap)
+- [Deployment Diagram](#deployment-diagram)
 - [GANTT Chart](#gantt-chart)
+- [PERT Chart](#pert-chart)
 - [Logical ERD](#logical-erd)
 - [Process flow for Camera](#process-flow-for-camera)
 	- [Algorithm Explanation](#algorithm-explanation)
 		- [Facial Detection](#facial-detection)
-		- [Facial Recognition](#facial-recognition)
-	- [BCS Code of Conduct](#bcs-code-of-conduct)
-- [Discussion / Conclusion](#discussion--conclusion)
+		- [Facial Recognition](#facial-recognition)	
+- [Discussion / Conclusion & Conclusion](#discussion--conclusion)
 	- [Social, Legal & Ethical Issues](#social-legal--ethical-issues)
 	- [Future Work](#future-work)
+	- [BCS Code of Conduct](#bcs-code-of-conduct)
 - [Appendix](#appendix)
 	- [Use Cases](#use-cases)
 	- [Test Plan](#test-plan)
@@ -91,7 +93,6 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 		- [Admin](#admin)
 		- [User Profile](#user-profile)
 		- [Elements Appendix](#elements-appendix)
-	- [Test Plan](#test-plan-1)
 	- [UI Screenshots](#ui-screenshots)
 		- [Login Page](#login-page)
 		- [Dashboard](#dashboard-1)
@@ -101,6 +102,7 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 		- [Alerts](#alerts)
 		- [User Profile](#user-profile-1)
 	- [Questionnaire Responses](#questionnaire-responses)
+	- [Meetings](#meetings-1)
 - [References](#references)
 
 \newpage
@@ -509,21 +511,7 @@ This new image better represents the features of the original image, as it store
 
 \newpage
 
-## BCS Code of Conduct
-
-In order to make our project as efficient as possible, the group decided that it will essential to use the British Computer Society’s (BCS) code of conduct, so it can guide us with professional standards and be aware of our responsibilities to each other and the public. 
-
-All of our decisions were made with the BCS code of conduct in mind. In order to keep our work professional, with competence and integrity, we made sure to thoroughly research and be up to date with the latest technology and techniques for our respective parts in this project. As it states in the BCS code of conduct “develop your professional knowledge, skills and competence on a continuing basis, maintaining awareness of technological developments, procedures, and standards that are relevant to your field.” [@bcs].
-
-Because of the nature of this project, working in a group, we ensured that everyone in the group had the same rights and authority toward the project. Everyone’s thoughts and opinions were taken into account , no matter the content, everyone had a voice and no one could contradict that, not only it is immoral it is enforced  by the (BCS) code of conduct “respect and value alternative viewpoints and, seek, accept and offer honest criticisms of work.” [@bcs].
-
-With that said this brings us to another matter, any form of discrimination was prohibited, not only it’s immoral, it is also illegal. The Equality Act 2010 and the BCS code of conduct state that any kind of discrimination is not allowed “conduct your professional activities without discrimination on the grounds of sex, sexual orientation, marital status, nationality, colour, race, ethnic origin, religion, age or disability, or of any other condition or requirement” [@bcs].
-
-It is important to say that we worked on this project for the public interest. We wanted to provide security and efficiency. With this product we want to saver time for the public and make there lives easier. Of course, the privacy of the public is our priority, we implemented restricted access to our product, so only personal that have a username and password can access the private data. With the BCS code of conduct stating, “You shall have due regard for public health, privacy, security and wellbeing of others and the environment.” [@bcs].
-
-\newpage
-
-# Discussion / Conclusion 
+# Discussion / Conclusion & Evaluation
 
 As a result of this project, the group has created a basic facial recognition system which records the location of a ‘hit’ (where the camera has successfully recognised a person based upon a pre-defined database of pictures). The cameras are designed to run on a lightweight device (demonstrated as a proof-of-concept on a Raspberry Pi) to allow the system to be cost-effective and for cameras to be in potentially secretive locations (depending on the use case). To monitor the data, a dashboard presenting all this information to relevant security personnel has also been created. From here, users of the dashboard can administer those people whom are known to the system, monitor activity in a specific location and action alerts of unknown reports in the places. 
 
@@ -554,6 +542,20 @@ As previously mentioned, this could be considered to be a basic implementation o
 In terms of work not complete, the group would like to have integrated this system with the ability to capture attendance for academic sessions within the university. This was defined as one of our stretch goals at the start of the project but due to limited time and technical limitations, this was not attainable in the given timeframe. 
 
 In the future, the system could also be integrated with the local police facial recognition database in order to identify unknown people automatically, not only would this allow security personnel to understand who is on campus without having to manually intervene (providing the person exists in the Police database), but it would also allow for security personnel to immediately identify criminals or unwanted people that are on campus. 
+
+\newpage
+
+## BCS Code of Conduct
+
+In order to make our project as efficient as possible, the group decided that it will essential to use the British Computer Society’s (BCS) code of conduct, so it can guide us with professional standards and be aware of our responsibilities to each other and the public. 
+
+All of our decisions were made with the BCS code of conduct in mind. In order to keep our work professional, with competence and integrity, we made sure to thoroughly research and be up to date with the latest technology and techniques for our respective parts in this project. As it states in the BCS code of conduct “develop your professional knowledge, skills and competence on a continuing basis, maintaining awareness of technological developments, procedures, and standards that are relevant to your field.” [@bcs].
+
+Because of the nature of this project, working in a group, we ensured that everyone in the group had the same rights and authority toward the project. Everyone’s thoughts and opinions were taken into account , no matter the content, everyone had a voice and no one could contradict that, not only it is immoral it is enforced  by the (BCS) code of conduct “respect and value alternative viewpoints and, seek, accept and offer honest criticisms of work.” [@bcs].
+
+With that said this brings us to another matter, any form of discrimination was prohibited, not only it’s immoral, it is also illegal. The Equality Act 2010 and the BCS code of conduct state that any kind of discrimination is not allowed “conduct your professional activities without discrimination on the grounds of sex, sexual orientation, marital status, nationality, colour, race, ethnic origin, religion, age or disability, or of any other condition or requirement” [@bcs].
+
+It is important to say that we worked on this project for the public interest. We wanted to provide security and efficiency. With this product we want to saver time for the public and make there lives easier. Of course, the privacy of the public is our priority, we implemented restricted access to our product, so only personal that have a username and password can access the private data. With the BCS code of conduct stating, “You shall have due regard for public health, privacy, security and wellbeing of others and the environment.” [@bcs].
 
 \newpage
 
@@ -744,10 +746,6 @@ Profile:
 12. Total Activity Breakdown
 \newpage
 
-## Test Plan
-
-
-
 ## UI Screenshots
 
 ### Login Page
@@ -784,6 +782,19 @@ Profile:
 ![Question 2](images/ppm-images/form-2.png)
 ![Question 3](images/ppm-images/form-3.png)
 ![Question 4](images/ppm-images/form-4.png)
+\newpage
+
+## Meetings
+
+![Meeting 1](images/ppm-images/meeting-1.png)
+\newpage
+![Meeting 2](images/ppm-images/meeting-2.png)
+\newpage
+![Meeting 3](images/ppm-images/meeting-3.png)
+\newpage
+![Meeting 4](images/ppm-images/meeting-4.png)
+\newpage
+![Meeting 5](images/ppm-images/meeting-5.png)
 \newpage
 
 # References
