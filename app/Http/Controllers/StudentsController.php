@@ -10,7 +10,7 @@ class StudentsController extends Controller
 {
     public function index()
     {
-        $students = Student::with(['course'])->get();
+        $students = Student::with(['course', 'reports'])->get();
 
         return response()->json(['data' => ['students' => $students]]);
     }
