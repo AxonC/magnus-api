@@ -71,14 +71,19 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 	- [Non-Functional Requirements](#non-functional-requirements)
 - [Normalisation](#normalisation)
 - [Context Diagram](#context-diagram)
+- [GANTT Chart](#gantt-chart)
 - [Logical ERD](#logical-erd)
 - [Process flow for Camera](#process-flow-for-camera)
+	- [Algorithm Explanation](#algorithm-explanation)
+		- [Facial Detection](#facial-detection)
+		- [Facial Recognition](#facial-recognition)
 	- [BCS Code of Conduct](#bcs-code-of-conduct)
 - [Discussion / Conclusion](#discussion--conclusion)
-	- [Social & Ethical Issues](#social--ethical-issues)
+	- [Social, Legal & Ethical Issues](#social-legal--ethical-issues)
 	- [Future Work](#future-work)
 - [Appendix](#appendix)
 	- [Use Cases](#use-cases)
+	- [Test Plan](#test-plan)
 	- [Screen Designs](#screen-designs)
 		- [Login](#login)
 		- [Dashboard](#dashboard)
@@ -86,6 +91,7 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 		- [Admin](#admin)
 		- [User Profile](#user-profile)
 		- [Elements Appendix](#elements-appendix)
+	- [Test Plan](#test-plan-1)
 	- [UI Screenshots](#ui-screenshots)
 		- [Login Page](#login-page)
 		- [Dashboard](#dashboard-1)
@@ -148,9 +154,9 @@ To meet the requirements set out for the Raspberry Pi and API, we will have to e
 
 Due to how niche this product is, there are few products available on the market, however there is one product avaliable in the United States that has been implemented in various locations and links with Police Databases (which is a further goal for our product). You can find some more information relating to the features, strengths and weaknesses of this product below
 
-| Product | Features | Strengths| Weaknesses |
-| --------- | --------------- | --------------- |------------|
-| FaceFirst (facefirst.com) | Facial Recognition Abilities, Police Database Link, Real Time Alerting| Links into Police Databases allowing for detection of Criminals, Multiple use case scenarios (Casinos, Campus Security, Authentication), Has an API/SDK Available|Expensive, Only available in the United States|
+| Product                   | Features                                                               | Strengths                                                                                                                                                         | Weaknesses                                     |
+| ------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| FaceFirst (facefirst.com) | Facial Recognition Abilities, Police Database Link, Real Time Alerting | Links into Police Databases allowing for detection of Criminals, Multiple use case scenarios (Casinos, Campus Security, Authentication), Has an API/SDK Available | Expensive, Only available in the United States |
 
 ## Product Demand
 
@@ -178,6 +184,8 @@ In regards to question 3, 95% of respondents agreed that they would feel safer a
 In regards to question 4, 87% of respondents agreed to having their data aggregated and used for statistical purposes, this is an interesting difference from question 2 and shows that consumers are happier to have their information aggregated and used but not while being targeted specifically.
 
 You can see the full results in the [Questionnaire Responses](#questionnaire-responses) section of the document.
+
+\newpage
 
 # Project Management
 
@@ -271,31 +279,31 @@ deadline.
 
 **Project Manager**: Callum Axon 
 
-| Name | Responsible For | Relevant Skills |
-| ---- | --------------- | --------------- |
-| Callum Axon | Backend Database & API | - PHP - MySQL - UML Tooling - Testing - Server Management |
-| Callum Carney | Monitoring Application | - HTML & CSS - JavaScript, Testing |
-| Finlay McKinnon | Monitoring Application | - HTML & CSS - Screen & Graphic Design |
-| Jordan Brightmore | Facial Recognition Software | Python - Machine Learning - Raspiban - Computer Vision |
-| Vital Harachka | Backend Database | SQL - PHP |
-| Wing Lam Chiang | Documentation & Database | SQL - PHP - Project Management Software
+| Name              | Responsible For             | Relevant Skills                                           |
+| ----------------- | --------------------------- | --------------------------------------------------------- |
+| Callum Axon       | Backend Database & API      | - PHP - MySQL - UML Tooling - Testing - Server Management |
+| Callum Carney     | Monitoring Application      | - HTML & CSS - JavaScript, Testing                        |
+| Finlay McKinnon   | Monitoring Application      | - HTML & CSS - Screen & Graphic Design                    |
+| Jordan Brightmore | Facial Recognition Software | Python - Machine Learning - Raspiban - Computer Vision    |
+| Vital Harachka    | Backend Database            | SQL - PHP                                                 |
+| Wing Lam Chiang   | Documentation & Database    | SQL - PHP - Project Management Software                   |
 \newpage
 
 # Risk Assessment
 
-| ID  | Description | Impact | Probability | Response |
-| ------ | --------------- | -------------- | ------ | ------------------ |
-| RE1 | Team member is ill, injured or cannot work on project due to personal reasons| High | Medium | Reorganise workload to cover team member. |
-| RE2 | Team member does not attend meetings due to a busy university schedule | Medium | Low | Organise more meetings at a common available time. Alternatively, use a digital solution |
-| RE3 | Team member consistently not doing work, time schedule falls at least a week behind | High | Medium | Assign multiple members to the same task - enabling redundancy |
-| RE4 | Data Loss | High | Low | Ensure a regular backup of work is taken. Use version control systems (VCS) for code & store in cloud. |
-| RE5 | Deadline Changes | Medium | Low | If deadline is earlier than before, change work schedule to account for it. |
-| RE6 | Missed Internal Deadlines | Very High | Low | Workload reorganised to complete project ahead of schedule, meetings to identify problems causing missed deadlines. |
-| RE7 | Team member leaves module/course | Very High | Low | Assign multiple members the same task, enabling redundancy, also ensure that all team members have open communication methods so that an early warning can be provided |
-| RE8 | Domineering personalities | Low | Low | If there is a dominant personality in the group which causes other members to feel unable to contribute, then limits could be made on individual contributions, also it is important that when members are speaking they have no interruption. Remind all the members of the group that it is important to hear and respect all opinions in relation to the topic. |
-| RE9 | Working with team members during non-term time | Medium | Low | If it is required for us to work with team members during non-term time then it will be important for us to have good communication so that all the team members still know what their roles are and what work need to be completed. |
-| RE10 | ICT resources may not be adequate or appropriately available for the demands of the project | Medium | Low | If ICT resources are inadequate then consider using external sources to reach the goals needed to complete the project to a good standard. |
-| RE11 | Team members finding topics or concepts difficult to grasp | Medium | Medium | Try help the team member to understand the topic they’re working on, however if they still don’t understand suggest a switch of topic or role on the project. |
+| ID   | Description                                                                                 | Impact    | Probability | Response                                                                                                                                                                                                                                                                                                                                                           |
+| ---- | ------------------------------------------------------------------------------------------- | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| RE1  | Team member is ill, injured or cannot work on project due to personal reasons               | High      | Medium      | Reorganise workload to cover team member.                                                                                                                                                                                                                                                                                                                          |
+| RE2  | Team member does not attend meetings due to a busy university schedule                      | Medium    | Low         | Organise more meetings at a common available time. Alternatively, use a digital solution                                                                                                                                                                                                                                                                           |
+| RE3  | Team member consistently not doing work, time schedule falls at least a week behind         | High      | Medium      | Assign multiple members to the same task - enabling redundancy                                                                                                                                                                                                                                                                                                     |
+| RE4  | Data Loss                                                                                   | High      | Low         | Ensure a regular backup of work is taken. Use version control systems (VCS) for code & store in cloud.                                                                                                                                                                                                                                                             |
+| RE5  | Deadline Changes                                                                            | Medium    | Low         | If deadline is earlier than before, change work schedule to account for it.                                                                                                                                                                                                                                                                                        |
+| RE6  | Missed Internal Deadlines                                                                   | Very High | Low         | Workload reorganised to complete project ahead of schedule, meetings to identify problems causing missed deadlines.                                                                                                                                                                                                                                                |
+| RE7  | Team member leaves module/course                                                            | Very High | Low         | Assign multiple members the same task, enabling redundancy, also ensure that all team members have open communication methods so that an early warning can be provided                                                                                                                                                                                             |
+| RE8  | Domineering personalities                                                                   | Low       | Low         | If there is a dominant personality in the group which causes other members to feel unable to contribute, then limits could be made on individual contributions, also it is important that when members are speaking they have no interruption. Remind all the members of the group that it is important to hear and respect all opinions in relation to the topic. |
+| RE9  | Working with team members during non-term time                                              | Medium    | Low         | If it is required for us to work with team members during non-term time then it will be important for us to have good communication so that all the team members still know what their roles are and what work need to be completed.                                                                                                                               |
+| RE10 | ICT resources may not be adequate or appropriately available for the demands of the project | Medium    | Low         | If ICT resources are inadequate then consider using external sources to reach the goals needed to complete the project to a good standard.                                                                                                                                                                                                                         |
+| RE11 | Team members finding topics or concepts difficult to grasp                                  | Medium    | Medium      | Try help the team member to understand the topic they’re working on, however if they still don’t understand suggest a switch of topic or role on the project.                                                                                                                                                                                                      |
 
 \newpage
 
@@ -303,83 +311,83 @@ deadline.
  
 ## Functional Requirements
 
-| FR# | Function      | Goal  | Actor | Justification | Importance Rating (out of 5) |
-| --- | --------------- | --------------- | --------- | ----------------- | ------------------ |
-| 1   | Face Scanning | A stationary camera is able to detect a face and scan certain data points for analysis | Stationary Camera |In order to provide a product that tracks people on a large campus, we must have an effective face scanning algorithm to track people across cameras|5 - This functionality is required for the system to work|
-| 2   | Position Reports can be filed      | Once a person has been identified all of the associated metadata is compiled and submitted as a report to the API  |Camera - Raspberry Pi       |In order to provide person tracking functionality the API must recieve compiled position reports to query at a later date, without these the application would loose a large portion of functionality.             |5 - This functionality is required for the system to work properly      |
-| 3   |New facial data can be added to the system     | An administrative user must be able to upload new facial data to be detected at a later point in time    |   Administrative User    |In order to match new faces to current people, an original image of a persons face must be uploaded to the system so that the two images can be compared at a later date               |5 - FR4 requires this function to exist           |
-|4 |New facial data is processed when uploaded to the web interface|Once an image of a person has been uploaded the associated facial data points are created and stored|API|In order to compare two faces, the system needs to generate data points from the two images and then compare the data points to calculate who has been detected|5 - Without this functionality the system would not be able to discover people|
-|5|A person can be discovered when they have a valid position report|If a member of the security team is looking for a person, they can search and find the related position reports|Security Personnel|A person must have position reports associated with them to allow the security team to search for them and discover their past or present location |3 - The application will still function without this, however a large piece of functionality would be missing|
-|6|A person can be located within a Campus/Location|A person must be able to be located within a campus setting.|Security Personnel|In order to allow security personnel to find people within a certain location, there must be functionality to discover a person.|3 - The application will still function without this, however a large piece of functionality would be missing|
-|7|A temporary pass can be assigned to a person|In order to be able to allow unknown users to walk around a campus without causing alerts a temporary pass can be assigned|Security Personnel|In order to lower the amount of False Negatives within a system, administrators can assign temporary passes that will allow unknown people to walk around the campus without causing alerts|4 - The application will still function without this, however a very important feature would be missing|
-|8|List Campuses|Display a list of Campuses|Web Interface|In order to display required information to users of the system, there must be functionality to display added campuses|4 - The application will still function without this, however a very important feature would be missing|
-|9|Add Campuses|Add a Campus|Web Interface|In order to manage buildings, campuses must be added so that buildings can then be associated with them|5 - This functionality is required for the system to work properly|
-|10|Remove Campuses|Remove a campus|Web Interface|A campus may no longer be required or may be phased out, therefore the ability to remove campuses must be included|4 - The application will still function without this, however a very important feature would be missing|
-|11|List Buildings|Display a list of buildings|Web Interface|In order to display required information to users of the system, there must be functionality to display added buildings|4 - The application will still function without this, however a very important feature would be missing|
-|12|Add Buildings|Add a building|Web Interface|In order to manage cameras, buildings must be added so that cameras can then be associated with them|5 - This functionality is required for the system to work properly|
-|13|Remove Buildings|Remove a building|Web Interface|A building may no longer be required or may be phased out, therefore the ability to remove buildings must be included|4 - The application will still function without this, however a very important feature would be missing|
-|14|Add Cameras|Add a camera|Raspberry Pi|In order to link person discovered with cameras a camera must first be enrolled onto the system, this occurs within the Python applications code|5 - This functionality is required for the system to work properly|
-|15|List Cameras|Display a list of Cameras|Web Interface|In order to display required information to users of the system, there must be functionality to display added cameras|4 - The application will still function without this, however a very important feature would be missing|
-|16|Update Cameras|Update a camera|Web Interface|A camera may have its location or information changed therefore, there must be functionality to update added cameras|4 - The application will still function without this, however a very important feature would be missing|
-|17|Remove Cameras|Remove a camera|Web Interface|A camera may no longer be required or may have been phased out therefore, there must be functionality to delete added cameras|4 - The application will still function without this, however a very important feature would be missing|
-|18|List Users|List Users|Web Interface|Administrators need to be able to list users to see who is administrating their system and what people have been registered|4 - The application will still function without this, however a very important feature would be missing|
-|19|View Users|View Users|Web Interface|Administrators should be able to view user profiles which should include statistics in regards to current and previous locations|3 - If possible, the system should have this implemented as it would be an excellent feature to have, however it is not critical to the functioning of the system|
-|20|Add Users|Add Users|Web Interface|Administrators need to be able to add users to the system, this could be for administrative purposes or just adding a low level user|4 - The application will still function without this, however a very important feature would be missing|
-|21|Remove Users|Remove Users|Web Interface|Administrators need to be able to list users to see who is administrating their system and what people have been registered|4 - The application will still function without this, however a very important feature would be missing|
-|22|List Statistics|List Statistics|Web Interface|Administrators should be able to look at statistics of their systems for example, what location is most popular, etc |2 - The application does not need or require this functionality, it is purely a quality of life improvement, however it would be a great advantage for administrators of the system|
-|23|React to Alerts|React to Alerts|Web Interface|Administrators and security personnel must be able to react (false negative, resolved) to alerts of unknown users on Campus in order to remove an unknown user listing|5 - The core objective of this system is that organisations can react to unknown people activity, therefore this functionality needs to be included|
+| FR# | Function                                                          | Goal                                                                                                                       | Actor                 | Justification                                                                                                                                                                                          | Importance Rating (out of 5)                                                                                                                                                        |
+| --- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Face Scanning                                                     | A stationary camera is able to detect a face and scan certain data points for analysis                                     | Stationary Camera     | In order to provide a product that tracks people on a large campus, we must have an effective face scanning algorithm to track people across cameras                                                   | 5 - This functionality is required for the system to work                                                                                                                           |
+| 2   | Position Reports can be filed                                     | Once a person has been identified all of the associated metadata is compiled and submitted as a report to the API          | Camera - Raspberry Pi | In order to provide person tracking functionality the API must recieve compiled position reports to query at a later date, without these the application would loose a large portion of functionality. | 5 - This functionality is required for the system to work properly                                                                                                                  |
+| 3   | New facial data can be added to the system                        | An administrative user must be able to upload new facial data to be detected at a later point in time                      | Administrative User   | In order to match new faces to current people, an original image of a persons face must be uploaded to the system so that the two images can be compared at a later date                               | 5 - FR4 requires this function to exist                                                                                                                                             |
+| 4   | New facial data is processed when uploaded to the web interface   | Once an image of a person has been uploaded the associated facial data points are created and stored                       | API                   | In order to compare two faces, the system needs to generate data points from the two images and then compare the data points to calculate who has been detected                                        | 5 - Without this functionality the system would not be able to discover people                                                                                                      |
+| 5   | A person can be discovered when they have a valid position report | If a member of the security team is looking for a person, they can search and find the related position reports            | Security Personnel    | A person must have position reports associated with them to allow the security team to search for them and discover their past or present location                                                     | 3 - The application will still function without this, however a large piece of functionality would be missing                                                                       |
+| 6   | A person can be located within a Campus/Location                  | A person must be able to be located within a campus setting.                                                               | Security Personnel    | In order to allow security personnel to find people within a certain location, there must be functionality to discover a person.                                                                       | 3 - The application will still function without this, however a large piece of functionality would be missing                                                                       |
+| 7   | A temporary pass can be assigned to a person                      | In order to be able to allow unknown users to walk around a campus without causing alerts a temporary pass can be assigned | Security Personnel    | In order to lower the amount of False Negatives within a system, administrators can assign temporary passes that will allow unknown people to walk around the campus without causing alerts            | 4 - The application will still function without this, however a very important feature would be missing                                                                             |
+| 8   | List Campuses                                                     | Display a list of Campuses                                                                                                 | Web Interface         | In order to display required information to users of the system, there must be functionality to display added campuses                                                                                 | 4 - The application will still function without this, however a very important feature would be missing                                                                             |
+| 9   | Add Campuses                                                      | Add a Campus                                                                                                               | Web Interface         | In order to manage buildings, campuses must be added so that buildings can then be associated with them                                                                                                | 5 - This functionality is required for the system to work properly                                                                                                                  |
+| 10  | Remove Campuses                                                   | Remove a campus                                                                                                            | Web Interface         | A campus may no longer be required or may be phased out, therefore the ability to remove campuses must be included                                                                                     | 4 - The application will still function without this, however a very important feature would be missing                                                                             |
+| 11  | List Buildings                                                    | Display a list of buildings                                                                                                | Web Interface         | In order to display required information to users of the system, there must be functionality to display added buildings                                                                                | 4 - The application will still function without this, however a very important feature would be missing                                                                             |
+| 12  | Add Buildings                                                     | Add a building                                                                                                             | Web Interface         | In order to manage cameras, buildings must be added so that cameras can then be associated with them                                                                                                   | 5 - This functionality is required for the system to work properly                                                                                                                  |
+| 13  | Remove Buildings                                                  | Remove a building                                                                                                          | Web Interface         | A building may no longer be required or may be phased out, therefore the ability to remove buildings must be included                                                                                  | 4 - The application will still function without this, however a very important feature would be missing                                                                             |
+| 14  | Add Cameras                                                       | Add a camera                                                                                                               | Raspberry Pi          | In order to link person discovered with cameras a camera must first be enrolled onto the system, this occurs within the Python applications code                                                       | 5 - This functionality is required for the system to work properly                                                                                                                  |
+| 15  | List Cameras                                                      | Display a list of Cameras                                                                                                  | Web Interface         | In order to display required information to users of the system, there must be functionality to display added cameras                                                                                  | 4 - The application will still function without this, however a very important feature would be missing                                                                             |
+| 16  | Update Cameras                                                    | Update a camera                                                                                                            | Web Interface         | A camera may have its location or information changed therefore, there must be functionality to update added cameras                                                                                   | 4 - The application will still function without this, however a very important feature would be missing                                                                             |
+| 17  | Remove Cameras                                                    | Remove a camera                                                                                                            | Web Interface         | A camera may no longer be required or may have been phased out therefore, there must be functionality to delete added cameras                                                                          | 4 - The application will still function without this, however a very important feature would be missing                                                                             |
+| 18  | List Users                                                        | List Users                                                                                                                 | Web Interface         | Administrators need to be able to list users to see who is administrating their system and what people have been registered                                                                            | 4 - The application will still function without this, however a very important feature would be missing                                                                             |
+| 19  | View Users                                                        | View Users                                                                                                                 | Web Interface         | Administrators should be able to view user profiles which should include statistics in regards to current and previous locations                                                                       | 3 - If possible, the system should have this implemented as it would be an excellent feature to have, however it is not critical to the functioning of the system                   |
+| 20  | Add Users                                                         | Add Users                                                                                                                  | Web Interface         | Administrators need to be able to add users to the system, this could be for administrative purposes or just adding a low level user                                                                   | 4 - The application will still function without this, however a very important feature would be missing                                                                             |
+| 21  | Remove Users                                                      | Remove Users                                                                                                               | Web Interface         | Administrators need to be able to list users to see who is administrating their system and what people have been registered                                                                            | 4 - The application will still function without this, however a very important feature would be missing                                                                             |
+| 22  | List Statistics                                                   | List Statistics                                                                                                            | Web Interface         | Administrators should be able to look at statistics of their systems for example, what location is most popular, etc                                                                                   | 2 - The application does not need or require this functionality, it is purely a quality of life improvement, however it would be a great advantage for administrators of the system |
+| 23  | React to Alerts                                                   | React to Alerts                                                                                                            | Web Interface         | Administrators and security personnel must be able to react (false negative, resolved) to alerts of unknown users on Campus in order to remove an unknown user listing                                 | 5 - The core objective of this system is that organisations can react to unknown people activity, therefore this functionality needs to be included                                 |
 
 \newpage
 
 ## Non-Functional Requirements
 
-| NFR# | Function      | Goal  | Actor | Importance Rating (out of 5) |
-| --- | ------------- | ------------------- | -------------- | ----------------- | --- |
-| 1   | Be usable | The system should be usable by any users with varying levels of computer proficiencies | Administrators |5|
-| 2   | Performance  | The system should be fast and responsive when administrators are using the Web Interface| Administrators |4|
-| 3   | Be easy to setup | Cameras should be easy to setup and link into the web interface| System Installer |3|
-| 4   | Automated Backup | The system should have an automated backup for the facial data to prevent loss of authorised users| Administrators |3|
-| 5   | Language | The system should have a variety of languages available in order to cater for non english speakers| Administrators |2|
-| 6   | Security | The system should be inherently secure and all data should be held in a secure facility/location| Administrators |5|
+| NFR# | Function | Goal | Actor | Importance Rating (out of 5) |
+| ---- | -------- | ---- | ----- | ---------------------------- ||
+| 1    | Be usable        | The system should be usable by any users with varying levels of computer proficiencies             | Administrators   | 5                            |
+| 2    | Performance      | The system should be fast and responsive when administrators are using the Web Interface           | Administrators   | 4                            |
+| 3    | Be easy to setup | Cameras should be easy to setup and link into the web interface                                    | System Installer | 3                            |
+| 4    | Automated Backup | The system should have an automated backup for the facial data to prevent loss of authorised users | Administrators   | 3                            |
+| 5    | Language         | The system should have a variety of languages available in order to cater for non english speakers | Administrators   | 2                            |
+| 6    | Security         | The system should be inherently secure and all data should be held in a secure facility/location   | Administrators   | 5                            |
 
 \newpage
 
 # Normalisation
 
-| UNF                          | 1NF                            | 2NF & 3NF          |
-| ---------------------------- | ------------------------------ | ------------------ | 
-| *Person ID                   | **Person**                     | **Person**         | 
-| Person First Name            | \*Person ID                    | \*Person ID        |
-| Person Last Name             |   First Name                   | First Name         |
-| Date of Birth                |   Last Name                    | Last Name          |
-| Gender                       |   Date of Birth                | Date of Birth      |
-| Camera ID                    |   Gender                       | Gender             |
-| Camera Name                  |                                |                    |
-| Camera Address               | **Camera**                     | **Camera**         |
-| Camera Active Flag           | \*Camera ID                    | \*Camera ID        |
-| Campus Name                  |  Camera Name                   | #*Building ID*     |
-| Campus Address               |  Camera Address                | Name               |
-| Campus City                  |  Camera Active Flag            | Address            |
-| Campus County                |  Campus Name                   | Active Flag        |
-| Campus Postcode              |  Campus Address                |                    |
-| Building Name                |  Campus City                   | **Campus**         |
-| Position Report ID           |  Campus County                 | \*Campus ID        |
-| Position Report Camera       |  Campus Postcode               | Name               |
-| Position Report Building     |  Building Name                 | Address            |
-| Position Report Campus       |  Position Report ID            | City               |
-| Security Alert ID            |  Security Alert ID             | County             |
-| Security Alert Camera        |  Security Alert Timestamp      | Postcode           |
-| Security Alert Timestamp     |  Security Alert Actioned Flag  |                    |
-| Security Alert Actioned Flag |                                | **Building**       |
-|                              |                                | \*Building ID      |
-|                              |                                | #*Campus ID*       |
-|                              |                                | Name               |
-|                              |                                |                    |
-|                              |                                | **Security Alert** |
-|                              |                                | \*Security Alert ID|
-|                              |                                | #*Camera ID*       |
-|                              |                                | Timestamp          |
-|                              |                                | Actioned Flag      |
+| UNF                          | 1NF                          | 2NF & 3NF           |
+| ---------------------------- | ---------------------------- | ------------------- |
+| *Person ID                   | **Person**                   | **Person**          |
+| Person First Name            | \*Person ID                  | \*Person ID         |
+| Person Last Name             | First Name                   | First Name          |
+| Date of Birth                | Last Name                    | Last Name           |
+| Gender                       | Date of Birth                | Date of Birth       |
+| Camera ID                    | Gender                       | Gender              |
+| Camera Name                  |                              |                     |
+| Camera Address               | **Camera**                   | **Camera**          |
+| Camera Active Flag           | \*Camera ID                  | \*Camera ID         |
+| Campus Name                  | Camera Name                  | #*Building ID*      |
+| Campus Address               | Camera Address               | Name                |
+| Campus City                  | Camera Active Flag           | Address             |
+| Campus County                | Campus Name                  | Active Flag         |
+| Campus Postcode              | Campus Address               |                     |
+| Building Name                | Campus City                  | **Campus**          |
+| Position Report ID           | Campus County                | \*Campus ID         |
+| Position Report Camera       | Campus Postcode              | Name                |
+| Position Report Building     | Building Name                | Address             |
+| Position Report Campus       | Position Report ID           | City                |
+| Security Alert ID            | Security Alert ID            | County              |
+| Security Alert Camera        | Security Alert Timestamp     | Postcode            |
+| Security Alert Timestamp     | Security Alert Actioned Flag |                     |
+| Security Alert Actioned Flag |                              | **Building**        |
+|                              |                              | \*Building ID       |
+|                              |                              | #*Campus ID*        |
+|                              |                              | Name                |
+|                              |                              |                     |
+|                              |                              | **Security Alert**  |
+|                              |                              | \*Security Alert ID |
+|                              |                              | #*Camera ID*        |
+|                              |                              | Timestamp           |
+|                              |                              | Actioned Flag       |
 
 \newpage
 
@@ -437,6 +445,32 @@ deadline.
 		\includegraphics[width=0.90\linewidth]{images/ppm-images/deployment-diagram.png}
     }
 	\caption{Deployment Diagram} \label{fig:deployment-diagram}
+\end{figure}
+
+\end{landscape}
+
+\newpage
+
+# GANTT Chart
+
+**Please note, this is a preview not the full GANTT Chart, please see PPMGanttChart.xlsx for the full GANTT Chart**
+
+![Preview of GANTT Chart](images/ppm-images/gantt-chart-preview.png)
+
+\newpage
+
+\begin{landscape}
+
+\pagestyle{empty}
+
+\hypertarget{pert-chart}{%
+\section{PERT Chart}\label{pert-chart}}
+
+\begin{figure}
+    \makebox[\linewidth]{
+		\includegraphics[width=1\linewidth]{images/ppm-images/pert-chart.png}
+    }
+	\caption{PERT Chart} \label{fig:pert-chart}
 \end{figure}
 
 \end{landscape}
@@ -505,7 +539,7 @@ Data on the whereabouts of people in the wrong hands could lead to the safety of
 
 Technologies for facial recognition (FRS) require machine-learning algorithms that have been trained with data to recognise facial features’. Many factors play into account that affect the match like the quality of the database image (pixel, size, lighting, etc.), the quality of the captured image, the algorithmic performance and more. The important aspect of the use of this technology is the operator and their response. The software itself does nothing but output its matches, it is the operator that will decide what to do with the information. The concern here is that if the software results in an inaccurate output and generates many matches the operator might act without verifying the accuracy of the match. Therefore, ethical principles must be in place. [@porter_uncategorized]
 
-UK Government guidelines relating to the use of facial recognition software [@porter-uncategorized] state that ethical issues include, but are not limited to:
+UK Government guidelines relating to the use of facial recognition software [@porter_uncategorized] state that ethical issues include, but are not limited to:
 - The use of the software can be used only if it benefits and serves the public interest.
 - The use of the software can be used only if it is a reliable tool to identify people.
 - If the software has unequal and discriminatory results should be open to careful examination and effective oversight.
@@ -548,6 +582,59 @@ In the future, the system could also be integrated with the local police facial 
 ![Use Case 7](images/ppm-images/use-case-7.png)
 \newpage
 
+## Test Plan
+
+We have performed extensive testing on our application, whenever a new feature is pushed to GitHub all related group members perform testing before it is pushed to the master branch and released. We also have far reaching Unit Tests that ensure the APIs features are working correctly and that suitable data is being returned.
+
+Below you can find testing results in relation to our Web Application
+
+| Test No | Requirement                                                                 | Type of Test                                                                                                                                            | Expected Result                                                                                          | Actual Result | Workaround | Retest |
+| :-----: | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------- | ---------- | ------ |
+|    1    | Inputting correct login credentials logs into the website.                  | Valid                                                                                                                                                   | The website will load into the dashboard page.                                                           | As expected   | N/A        | N/A    |
+|    2    | Inputting incorrect login credentials denies access to the website.         | The user will receive a message informing them to correctly log in.                                                                                     | The user will receive a message informing them to correctly log in.                                      | As expected   | N/A        | N/A    |
+|    3    | Checking the remember me box will allow the site to remember the user.      | Checking the remember me box will allow the site to remember the user.                                                                                  | Checking the remember me box will allow the site to remember the user.                                   | As expected   | N/A        | N/A    |
+|    4    | The dashboard button redirects the user to the dashboard page.              | On activation of the dashboard button, the user will be taken to the dashboard.                                                                         | On activation of the dashboard button, the user will be taken to the dashboard.                          | As expected   | N/A        | N/A    |
+|    5    | The dashboard loads and displays all required data correctly.               | On load the dashboard populates all fields on the page from given resources.                                                                            | On load the dashboard populates all fields on the page from given resources.                             | As expected   | N/A        | N/A    |
+|    6    | The dashboard displays relevant and current data of detection data.         | The camera detections table is populated with relevant detection data.                                                                                  | The camera detections table is populated with relevant detection data.                                   | As expected   | N/A        | N/A    |
+|    7    | The dashboard displays information on campus locations and buildings.       | The campus capacities table will be populated with relevant locational data.                                                                            | The campus capacities table will be populated with relevant locational data.                             | As expected   | N/A        | N/A    |
+|    8    | The statistics button will redirect the user to the statistics page.        | On activation of the statistics button, the user will be taken to the statistics page.                                                                  | On activation of the statistics button, the user will be taken to the statistics page.                   | As expected   | N/A        | N/A    |
+|    9    | The statistics page will display relevant activity data.                    | On load the statistics page will be populated with general data of the system.                                                                          | On load the statistics page will be populated with general data of the system.                           | As expected   | N/A        | N/A    |
+|   10    | The statistics page can show specifically student data.                     | On button press of the student button, the activity graph will change to specifically show student data.                                                | On button press of the student button, the activity graph will change to specifically show student data. | As expected   | N/A        | N/A    |
+|   11    | The statistics page can show specifically staff data.                       | On button press of the staff button, the activity graph will change to specifically show staff data.                                                    | On button press of the staff button, the activity graph will change to specifically show staff data.     | As expected   | N/A        | N/A    |
+|   12    | The statistics page can show specifically guest data.                       | On button press of the guest button, the activity graph will change to specifically show guest data.                                                    | On button press of the guest button, the activity graph will change to specifically show guest data.     | As expected   | N/A        | N/A    |
+|   13    | The statistics page can show general data of the system.                    | On button press of the general button, the activity graph will change to show all user data.                                                            | On button press of the general button, the activity graph will change to show all user data.             | As expected   | N/A        | N/A    |
+|   14    | The statistics page graph presents current and relevant data.               | On draw the graph will display date by date information for each location for each user type.                                                           | On draw the graph will display date by date information for each location for each user type.            | As expected   | N/A        | N/A    |
+|   15    | The statistics graph can be used to view past data.                         | On load the graph presents the past 30 days of data, though after pressing the 30, 60 or 90-day button the corresponding data will be displayed.        | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   16    | The statistics page shows current locational data.                          | On load the current campus activity table will be filled with current locational activity, showing the spread of people across the campus.              | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   17    | The Administration button will redirect the user to the admin page.         | On activation, the button will take the user to their administration page, suited to their access level.                                                | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   18    | The admin page displays all current system users.                           | On load the admin page will default to the user’s tab which will display all of the current users.                                                      | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   19    | The admin page allows the user to find another users profile.               | If the user has correct privileges, using the view profile button will take the user to the selected user’s profile.                                    | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   20    | The admin page allows the user to edit another users profile.               | If the user has correct privileges, using the edit button will allow the user to edit the selected user’s information.                                  | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   21    | The admin page allows the user to delete another user.                      | If the user has correct privileges, using the delete button will delete the selected user’s account.                                                    | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   22    | The admin page will show data relevant to buildings and locations.          | On selecting the campuses and buildings tab the page will show connected buildings and campuses. This will also display their respective status.        | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   23    | The admin page allows the user to view data on locations and buildings.     | If the user has correct privileges, on selected the view info button the user will be taken to a page containing data on the selected location.         | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   24    | The admin page allows the user to edit locations and buildings data.        | If the user has correct privileges, on selecting the edit data button the user will be able to edit the selected locations data.                        | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   25    | The admin page will allow the user to delete locations and buildings.       | If the user has correct privileges, on selecting the delete button, the selected location will be deleted form the system.                              | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   26    | The admin page will show the camera and connection status of each location. | The campuses and buildings tab will automatically show the current status of the registered locations.                                                  | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   27    | The admin page will allow the user to browse data of registered locations.  | On selection of a location it will display all ‘sublocations’ associated with the location.                                                             | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   28    | The admin page will allow the user to view all registered cameras .         | On selection of the cameras tab, the page will then show a table of all of the registered cameras.                                                      | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   29    | The admin page will show all relevant data regarding cameras.               | On selection of the cameras tab, the cameras table displays relevant technical information about each camera as well as its status.                     | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   30    | The admin page will allow the user to inspect cameras.                      | If the user has correct privileges, on selection of the view camera button, the user will be able to view relevant data of the camera they selected.    | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   31    | The admin page will allow the user to edit camera data.                     | If the user has correct privileges, on selection of the edit button the user will be able to edit the selected cameras data.                            | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   32    | The admin page will allow the user to remove cameras.                       | If the user has correct privileges, on selection of the delete button, the camera that has been selected will be removed from the system.               | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   33    | The alerts button will navigate the user to the alerts page.                | On activation of the alerts button the user will be taken to the alerts page of their permissions.                                                      | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   34    | The alerts page will show information about alert events.                   | On load the alerts page will display all of the recent unacknowledged alerts of the system and relevant information.                                    | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   35    | The alerts page generates relevant and important alerts.                    | The alerts page will be updated whenever there is an unknown person detected by the cameras and remain until acknowledged.                              | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   36    | The alerts page allows the user to acknowledge the alerts.                  | The user will be able to acknowledge each of the alerts through either pressing the false negative button or the resolved button.                       | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   37    | The Profile button will take the user to their personal profile.            | Upon activation of the button, the user will be taken to their personal profile page with their own data.                                               | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   38    | The profile page will display safe and relevant personal data of the user.  | On load the profile page will display the users name, course or profession, and year.                                                                   | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   39    | The profile page will display the users positioning.                        | On load, the profile will display the users current and most favoured position, in the case that the user’s current position is false.                  | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   40    | The profile page will display the users past positioning.                   | On load, the page will load the most recent data regarding the users previous positioning. This will be displayed in the detections table.              | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   41    | The profile page will indicate a user’s activity.                           | Within the detections table an academic column indicates if an action was academic related or not.                                                      | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   42    | The profile page will show a user’s habits.                                 | On load the user’s favoured location will be shown, as well as an activity table which shows a breakdown of the user’s total recorded action locations. | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   43    | The logout button will have the desired effect when used.                   | Upon activating the logout button, the logout protocol will begin.                                                                                      | As expected                                                                                              | As expected   | N/A        | N/A    |
+|   44    | The user will be able to safely log out of the system.                      | Upon use of the logout button the user’s session will be ended and will need to re-login.                                                               | As expected                                                                                              | As expected   | N/A        | N/A    |
+
 
 ## Screen Designs
 
@@ -558,6 +645,7 @@ In the future, the system could also be integrated with the local police facial 
 The login page will be the first page that the user will interact with. This will require a username / email and password to be entered in order to access the website. This will also contain a ‘Forgotten Password’ button to give extra assistance to the user. 
 
 \newpage
+
 ### Dashboard
 
 ![Dashboard](images/ppm-images/dashboard-design.png)
@@ -565,18 +653,21 @@ The login page will be the first page that the user will interact with. This wil
 The dashboard will be the first screen that the user views after logging in. This page will display general details about the system and how it is preforming, giving specific updates on new users, detections, unknown detections, etc. This will also show specific data on camera activity, showing which cameras have detected what user type, or if it has detected and invalid user.   
 
 \newpage
+
 ### Statistics
 
 ![Statistics](images/ppm-images/statistics-design.png)
 
 The statistics page will show the user all of the relative data regarding user activity. This page includes a graph which will show specified user activity between campus locations. The specified user will be changeable by a set of buttons at the top of the screen. The statistics page will also display campus activity in specific buildings.  
 \newpage
+
 ### Admin
 
 ![Admin](images/ppm-images/admin-design.png)
 
 The admin page will allow the user the create and edit data. This data may be regarding a permanent user, temporary user, or a camera. This page will be used in order to view users’ profiles, add users, edit current user’s data, find specific locational data and also find specific camera data.  
 \newpage
+
 ### User Profile
 
 ![User Profile](images/ppm-images/profile-design.png)
@@ -652,6 +743,10 @@ Profile:
 11. Detections Table
 12. Total Activity Breakdown
 \newpage
+
+## Test Plan
+
+
 
 ## UI Screenshots
 
