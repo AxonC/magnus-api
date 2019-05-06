@@ -54,6 +54,8 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 	- [Objectives](#objectives)
 - [Existing Solutions](#existing-solutions)
 	- [Product Demand](#product-demand)
+		- [Organisations](#organisations)
+		- [Consumers](#consumers)
 - [Project Management](#project-management)
 	- [Meetings](#meetings)
 		- [General Absence](#general-absence)
@@ -84,6 +86,8 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 		- [Admin](#admin)
 		- [User Profile](#user-profile)
 		- [Elements Appendix](#elements-appendix)
+	- [UI Screenshots](#ui-screenshots)
+	- [Questionnaire Responses](#questionnaire-responses)
 - [References](#references)
 
 \newpage
@@ -135,11 +139,38 @@ To meet the requirements set out for the Raspberry Pi and API, we will have to e
 
 # Existing Solutions
 
+Due to how niche this product is, there are few products available on the market, however there is one product avaliable in the United States that has been implemented in various locations and links with Police Databases (which is a further goal for our product). You can find some more information relating to the features, strengths and weaknesses of this product below
+
+| Product | Features | Strengths| Weaknesses |
+| --------- | --------------- | --------------- |------------|
+| FaceFirst (facefirst.com) | Facial Recognition Abilities, Police Database Link, Real Time Alerting| Links into Police Databases allowing for detection of Criminals, Multiple use case scenarios (Casinos, Campus Security, Authentication), Has an API/SDK Available|Expensive, Only available in the United States|
+
 ## Product Demand
+
+### Organisations
 
 While there is no direct demand for this product, this could just be down to the fact that organisations and people do not know that this technology is possible and that it can be easily installed into their campuses. With more visibility around this product we believe that there would be significant interest, especially from Universities and Companies with open campuses in the United States. After conducting market research, it was discovered that some organisations in China have adopted the facial recognition approach for identifying users [@china-facialrec] and that it is working well for the organisations in question. [@china-facerec]
 
 The unfortunate upward trend of school shooting and attacks on open campuses will lead to more interest in facial recognition software to help prevent, rather than lessen the impact of an attack.
+
+### Consumers
+
+Due to the potential ethical issues that could arise from an organisation using this type of product, the group was interested in seeing if consumers would approve of this type of technology being used. We released a form which asked the following questions
+
+1. Would you personally consent to having your face scanned when entering a location?
+2. Would you personally consent to having your location tracked in real-time by a human being through the use of facial recognition?
+3. Would you feel safer at a location if you knew that Facial Detection was occurring (where faces are compared to known people and unknown people are flagged)
+4. Would you personally consent to your tracking data being aggregated and used for statistical purposes?
+
+In regards to question 1, 91% of respondents agreed to having their face scanned when entering a location, this is a great response rate because without consumer support, this product would not be able to work effectively for an organisation.
+
+In regards to question 2, 83% of respondents agreed to having their location tracked by a human being, this is a decrease from the previous question, and was expected by the group due to the privacy violations that could be argued when tracking someones location constantly.
+
+In regards to question 3, 95% of respondents agreed that they would feel safer at a location if they knew that Facial Detection is occurring, this is excellent to see as it shows that the product would have a profound difference to consumer safety.
+
+In regards to question 4, 87% of respondents agreed to having their data aggregated and used for statistical purposes, this is an interesting difference from question 2 and shows that consumers are happier to have their information aggregated and used but not while being targeted specifically.
+
+You can see the full results in the [Questionnaire Responses](#questionnaire-responses) section of the document.
 
 # Project Management
 
@@ -246,7 +277,7 @@ deadline.
 # Risk Assessment
 
 | ID  | Description | Impact | Probability | Response |
-| --- | ----------- | ------ | ------ | ------------- |
+| ------ | --------------- | -------------- | ------ | ------------------ |
 | RE1 | Team member is ill, injured or cannot work on project due to personal reasons| High | Medium | Reorganise workload to cover team member. |
 | RE2 | Team member does not attend meetings due to a busy university schedule | Medium | Low | Organise more meetings at a common available time. Alternatively, use a digital solution |
 | RE3 | Team member consistently not doing work, time schedule falls at least a week behind | High | Medium | Assign multiple members to the same task - enabling redundancy |
@@ -584,6 +615,17 @@ Profile:
 11. Detections Table
 12. Total Activity Breakdown
 \newpage
+
+## UI Screenshots
+
+
+
+## Questionnaire Responses
+
+![Question 1](images/ppm-images/form-1.png)
+![Question 2](images/ppm-images/form-2.png)
+![Question 3](images/ppm-images/form-3.png)
+![Question 4](images/ppm-images/form-4.png)
 
 
 # References
