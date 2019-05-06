@@ -87,6 +87,13 @@ Due to the nature of this system, there are a lot of potential legal and ethical
 		- [User Profile](#user-profile)
 		- [Elements Appendix](#elements-appendix)
 	- [UI Screenshots](#ui-screenshots)
+		- [Login Page](#login-page)
+		- [Dashboard](#dashboard-1)
+		- [Administrative Dashboard - Users](#administrative-dashboard---users)
+		- [Administrative Dashboard - Buildings](#administrative-dashboard---buildings)
+		- [Administrative Dashboard - Cameras](#administrative-dashboard---cameras)
+		- [Alerts](#alerts)
+		- [User Profile](#user-profile-1)
 	- [Questionnaire Responses](#questionnaire-responses)
 - [References](#references)
 
@@ -618,7 +625,33 @@ Profile:
 
 ## UI Screenshots
 
+### Login Page
+![Login](images/ppm-images/login.png)
+\newpage
 
+### Dashboard
+![Dashboard](images/ppm-images/dashboard.png)
+\newpage
+
+### Administrative Dashboard - Users
+![Administrative Dashboard - Users](images/ppm-images/dashboard-users.png)
+\newpage
+
+### Administrative Dashboard - Buildings
+![Administrative Dashboard - Buildings](images/ppm-images/dashboard-buildings.png)
+\newpage
+
+### Administrative Dashboard - Cameras
+![Administrative Dashboard - Cameras](images/ppm-images/dashboard-camera.png)
+\newpage
+
+### Alerts
+![Alerts](images/ppm-images/alerts.png)
+\newpage
+
+### User Profile
+![User Profile](images/ppm-images/user-profile.png)
+\newpage
 
 ## Questionnaire Responses
 
@@ -626,6 +659,6 @@ Profile:
 ![Question 2](images/ppm-images/form-2.png)
 ![Question 3](images/ppm-images/form-3.png)
 ![Question 4](images/ppm-images/form-4.png)
-
+\newpage
 
 # References
