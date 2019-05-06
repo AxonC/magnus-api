@@ -481,6 +481,25 @@ deadline.
 ![](images/ppm-images/camera-flow.png){width=70%}
 
 \newpage
+## Algorithm Explanation
+
+### Facial Detection
+
+For the facial detection portion of the program the haar cascading classifiers is used, with a pre trained model of faces. Haars works by extracting all useful filters from an image, it does this with the below image. Each feature is a value obtained by subtracting a sum of pixels from under the white section from the sum of pictures under the black section.
+![Camera Pixel Comparison 1](images/ppm-images/camera-algorithm1.png)
+![Camera Pixel Comparison 2](images/ppm-images/camera-algorithm2.png)
+
+Each filter will be placed at every available size of the image some will be useful other won't be, but this is where the problems start, doing this for a 24x24 pixel image will use over 160000 features. This is very time consuming which is where the power of haar comes in. It applies the filters in a cascading fashion. Applying one set and if all of the comeback positive, the next set will be used this is very beneficial as it help weed out areas that aren't faces quicker. An image that passes all states of the cascade will be returned with the information of the region the contains the space.
+
+### Facial Recognition
+
+For the facial recognition the Local Binary Pattern Histograms (LBPH) was used. This method excels at its efficiency in terms of computational power, working by taking in a grayscale image and for every pixel gets the 8 neighbors' pixel values.  If there below a threshold then the cell is given a zero - else it's given a one, a binary number is then constructed from the cells and this is that positions new color value.
+![Local Binary Pattern Histogram 1](images/ppm-images/camera-algorithm3.png)
+![Local Binary Pattern Histogram 1](images/ppm-images/camera-algorithm4.png)
+
+This new image better represents the features of the original image, as it stores a histogram for how many occurrences there are of each brightness value. This is then compared with a trained model and the closest neighbor is found. A match will always be given back this is why a threshold need to be implemented as a value too far away from the original is unlikely to be a positive match.
+
+\newpage
 
 ## BCS Code of Conduct
 
